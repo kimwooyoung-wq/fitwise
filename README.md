@@ -151,7 +151,7 @@ final_score =
 
 가중치는 초기 가설이며 사용자 테스트를 통해 조정합니다. 모든 점수는 구성 요소와 근거를 함께 노출하고, 데이터가 부족하면 낮은 신뢰도로 표시합니다.
 
-[추천 파이프라인 자세히 보기 →](docs/architecture/recommendation-pipeline.md) · [My Wardrobe 설계 보기 →](docs/product/my-wardrobe.md) · [제품 전략과 사업 가설 →](docs/product/product-strategy.md)
+[추천 파이프라인 자세히 보기 →](docs/architecture/recommendation-pipeline.md) · [상품 카탈로그 수집 전략 →](docs/architecture/product-catalog-ingestion.md) · [My Wardrobe 설계 보기 →](docs/product/my-wardrobe.md) · [제품 전략과 사업 가설 →](docs/product/product-strategy.md)
 
 ---
 
@@ -246,6 +246,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Visual system](docs/design/visual-system.md) | 색상, 서체, 레이아웃 원칙 | Draft |
 | [My Wardrobe](docs/product/my-wardrobe.md) | 옷장 데이터와 추천 활용 방식 | Draft |
 | [Recommendation pipeline](docs/architecture/recommendation-pipeline.md) | 후보 생성, 점수와 설명 흐름 | Draft |
+| [Product catalog ingestion](docs/architecture/product-catalog-ingestion.md) | 공식 피드·API 수집, 정규화, 최신성과 권리 정책 | Draft |
 | Product requirements | MVP 요구사항과 제외 범위 | Planned |
 | User research | 인터뷰 계획과 결과 | Planned |
 | Architecture | 시스템과 데이터 흐름 | Planned |
