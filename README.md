@@ -199,6 +199,8 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 
 ## 08. Roadmap
 
+> **Execution plan** · 2026-10-08부터 2027-03-10까지 진행하는 [22주 주차별 과제](tasks/ROADMAP.md)를 기준으로 매주 산출물과 완료 조건을 점검합니다. 현재 과제는 [`tasks/CURRENT.md`](tasks/CURRENT.md)에서 확인합니다.
+
 | Phase | Focus | Deliverable |
 |---|---|---|
 | 01 · Discovery | 사용자 문제와 시장 조사 | 인터뷰, 문제 정의, 성공 지표 |
