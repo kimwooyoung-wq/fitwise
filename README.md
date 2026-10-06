@@ -27,7 +27,7 @@ FITWISE는 검색, 후기 탐색, 사이즈 고민과 상품 비교를 하나의
 > **Product hypothesis**
 > 목적·체형·예산과 유사 체형 리뷰를 함께 분석해 추천 이유와 신뢰도를 제공하면, 구매 결정 시간은 줄고 선택 확신도는 높아질 것이다.
 
-[문제 정의 자세히 보기 →](docs/product/problem.md)
+[문제 정의 자세히 보기 →](docs/product/problem.md) · [제품 전략과 사업 가설 →](docs/product/product-strategy.md)
 
 ---
 
@@ -63,7 +63,8 @@ flowchart LR
     D --> E["05 · 근거 확인<br/>사이즈 · 후기 · 조합"]
     E --> F["06 · 비교 보드<br/>우선순위 조정"]
     F --> G["07 · 결정과 피드백<br/>저장 · 제외 · 선호"]
-    G -. "다음 추천에 반영" .-> D
+    G --> H["08 · 구매 후 연결<br/>옷장 등록 · 핏 · 조합"]
+    H -. "착용 피드백을 다음 추천에 반영" .-> D
 ```
 
 ### Example journey
@@ -76,6 +77,7 @@ flowchart LR
 | 4 | Safe·Balanced·Bold 결과 확인 | 상품, 추천 이유, 예상 활용도와 주의점 제공 |
 | 5 | 가격과 활용도의 중요도를 조정 | 비교 순위와 설명을 즉시 재계산 |
 | 6 | 후보를 저장하거나 제외 | 명시적 피드백을 다음 추천에 반영 |
+| 7 | 구매한 옷을 My Wardrobe에 연결 | 실제 핏, 기존 옷과의 조합, 활용도와 중복 위험 분석 |
 
 ---
 
@@ -149,7 +151,7 @@ final_score =
 
 가중치는 초기 가설이며 사용자 테스트를 통해 조정합니다. 모든 점수는 구성 요소와 근거를 함께 노출하고, 데이터가 부족하면 낮은 신뢰도로 표시합니다.
 
-[추천 파이프라인 자세히 보기 →](docs/architecture/recommendation-pipeline.md) · [My Wardrobe 설계 보기 →](docs/product/my-wardrobe.md)
+[추천 파이프라인 자세히 보기 →](docs/architecture/recommendation-pipeline.md) · [My Wardrobe 설계 보기 →](docs/product/my-wardrobe.md) · [제품 전략과 사업 가설 →](docs/product/product-strategy.md)
 
 ---
 
@@ -225,6 +227,9 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | Decision completion | 비교 후 하나의 후보를 선택한 비율 |
 | Wardrobe utilization | 추천 결과 중 보유 의류와 조합 가능한 비율 |
 | Duplicate avoidance | 사용자가 중복 구매 후보를 발견·제외한 횟수 |
+| Product outbound rate | 추천 결과에서 상품 상세 또는 구매처로 이동한 비율 |
+| Wardrobe connection | 선택한 상품을 옷장과 구매 후 분석에 연결한 비율 |
+| Reuse intent | 다음 구매에도 FITWISE를 사용하려는 비율 |
 
 측정 전 수치를 성과처럼 제시하지 않습니다. 사용자 테스트 이후 실제 결과와 한계를 함께 공개합니다.
 
@@ -235,6 +240,9 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | Document | Purpose | Status |
 |---|---|---|
 | [Problem statement](docs/product/problem.md) | 문제, 가설, 검증 기준 | Draft |
+| [Product strategy](docs/product/product-strategy.md) | 차별화, 제품 루프, 사업 모델 가설 | Draft |
+| [Competitive analysis framework](docs/research/competitive-analysis-framework.md) | 경쟁 서비스와 사업성 평가 기준 | Draft |
+| [Survey questionnaire](docs/research/survey-questionnaire.md) | 공개 설문 문항과 분석 계획 | Active |
 | [Visual system](docs/design/visual-system.md) | 색상, 서체, 레이아웃 원칙 | Draft |
 | [My Wardrobe](docs/product/my-wardrobe.md) | 옷장 데이터와 추천 활용 방식 | Draft |
 | [Recommendation pipeline](docs/architecture/recommendation-pipeline.md) | 후보 생성, 점수와 설명 흐름 | Draft |

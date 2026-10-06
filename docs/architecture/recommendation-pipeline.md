@@ -37,7 +37,8 @@ flowchart TB
   "budget_max": 200000,
   "styles": ["minimal", "smart_casual"],
   "avoid": ["large_logo", "slim_fit"],
-  "required_categories": ["top", "outerwear"]
+  "required_categories": ["top", "outerwear"],
+  "wardrobe_item_ids": ["black-wide-pants"]
 }
 ```
 
@@ -101,6 +102,8 @@ flowchart TB
 - 더 저렴하게
 - 더 개성 있게
 - 사이즈 추천이 맞음 또는 맞지 않음
+- 구매함 또는 구매하지 않음
+- 실제 착용감과 함께 입은 보유 의류
 
 ## Confidence
 
