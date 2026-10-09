@@ -14,3 +14,13 @@
 단, 사용자 흐름 검증을 앞당기기 위한 `검색 → 추천 결과` 기술 프로토타입은 합성 데이터로 병행한다. 프로토타입 결과를 제품 가치가 검증된 것으로 해석하거나 실제 브랜드 상품을 연결하지 않는다.
 
 다음 주 예정: 설문 유효 응답 분석, 경쟁 서비스 비교, 핵심 문제와 첫 프로토타입 검증 기준 선정.
+
+## 프로토타입 병행 준비
+
+- [x] 검색 → 추천 API 계약과 앱 상태 프로토타입
+- [x] 앱 기술 스택·저장소·도입 순서 문서화
+- [x] 오류 분류와 개인 Error Center 운영 기준 문서화
+- [ ] Android 또는 iOS 실기기에서 정상·빈 결과·오류·재시도 확인
+- [ ] 설문 종료 후 MVP PRD와 데이터 사전·ERD v0 확정
+
+기술 기준: [App foundation](../docs/architecture/app-foundation.md) · [Error management](../docs/operations/error-management.md)

@@ -5,6 +5,10 @@ on:
     paths:
       - 'apps/mobile/**'
       - 'services/api/**'
+      - 'docs/architecture/**'
+      - 'docs/operations/**'
+      - 'tasks/CURRENT.md'
+      - 'README.md'
       - '.github/workflows/prototype-ci.yml'
 
 jobs:

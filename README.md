@@ -251,10 +251,12 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [My Wardrobe](docs/product/my-wardrobe.md) | 옷장 데이터와 추천 활용 방식 | Draft |
 | [Recommendation pipeline](docs/architecture/recommendation-pipeline.md) | 후보 생성, 점수와 설명 흐름 | Draft |
 | [Product catalog ingestion](docs/architecture/product-catalog-ingestion.md) | 공식 피드·API 수집, 정규화, 최신성과 권리 정책 | Draft |
+| [App foundation](docs/architecture/app-foundation.md) | 앱 기술 스택, 저장소 경계, 데이터 모델과 도입 순서 | Draft |
+| [Error management](docs/operations/error-management.md) | 오류 수집, 분류, 수정·재검증과 Error Center 기준 | Active |
 | [WOOYOUNG PROJECT OS 점검 기록](docs/operations/project-os-dashboard.md) | 프로젝트 홈 구현 범위, 연결 저장소, 동작 점검과 제한사항 | Active |
 | Product requirements | MVP 요구사항과 제외 범위 | Planned |
 | User research | 인터뷰 계획과 결과 | Planned |
-| Architecture | 시스템과 데이터 흐름 | Planned |
+| Data dictionary & ERD v0 | 데이터 정의, 소유권, 민감도와 삭제 규칙 | Planned |
 
 ---
 
