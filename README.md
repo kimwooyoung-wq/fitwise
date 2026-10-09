@@ -179,6 +179,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 
 ![Next.js](https://img.shields.io/badge/Next.js-111111?style=flat-square&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
@@ -188,7 +189,8 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 
 | Layer | Plan |
 |---|---|
-| Web | Next.js · TypeScript · Tailwind CSS |
+| App | Expo · React Native · TypeScript |
+| Web expansion | Next.js · TypeScript · Tailwind CSS |
 | API | FastAPI · Python |
 | Data | PostgreSQL · pgvector |
 | Auth & Storage | Supabase |
@@ -196,6 +198,8 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | Delivery | Docker · GitHub Actions |
 
 > The stack is a working proposal and may change after product discovery.
+
+현재는 앱 우선으로 [`검색 → 추천 결과` 기술 프로토타입](docs/architecture/mobile-search-prototype.md)을 구성한다. 합성 상품으로 API 계약과 사용 흐름만 검증하며, 설문 결과 전에는 추천 정확도나 기능 우선순위가 검증됐다고 판단하지 않는다.
 
 ---
 
