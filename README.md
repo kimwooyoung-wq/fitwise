@@ -247,12 +247,14 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Product strategy](docs/product/product-strategy.md) | 차별화, 제품 루프, 사업 모델 가설 | Draft |
 | [Competitive analysis framework](docs/research/competitive-analysis-framework.md) | 경쟁 서비스와 사업성 평가 기준 | Draft |
 | [Survey questionnaire](docs/research/survey-questionnaire.md) | 공개 설문 문항과 분석 계획 | Active |
+| [Survey results](docs/research/survey-results.md) | 21건 중간 집계, 제품 결정과 후속 검증 | Active |
 | [Visual system](docs/design/visual-system.md) | 색상, 서체, 레이아웃 원칙 | Draft |
 | [My Wardrobe](docs/product/my-wardrobe.md) | 옷장 데이터와 추천 활용 방식 | Draft |
 | [Recommendation pipeline](docs/architecture/recommendation-pipeline.md) | 후보 생성, 점수와 설명 흐름 | Draft |
 | [Product catalog ingestion](docs/architecture/product-catalog-ingestion.md) | 공식 피드·API 수집, 정규화, 최신성과 권리 정책 | Draft |
 | [App foundation](docs/architecture/app-foundation.md) | 앱 기술 스택, 저장소 경계, 데이터 모델과 도입 순서 | Draft |
 | [Engineering quality plan](docs/architecture/engineering-quality-plan.md) | 데이터 무결성·SQL·UI/UX·개인정보·보안·AX 자동화 기준 | Active |
+| [Security benchmark & plan](docs/security/security-benchmark-and-plan.md) | OWASP·개인정보위·유사 서비스 기반 보안 통제와 출시 게이트 | Active |
 | [Test strategy](docs/quality/test-strategy.md) | 테스트 계층, 환경, 시나리오와 통과 기준 | Active |
 | [Test log](docs/quality/test-log.md) | 테스트·오류·복구 검증 실행 기록 | Active |
 | [Error management](docs/operations/error-management.md) | 오류 수집, 분류, 수정·재검증과 Error Center 기준 | Active |

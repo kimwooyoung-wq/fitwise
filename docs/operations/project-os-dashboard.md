@@ -1,6 +1,6 @@
 # WOOYOUNG PROJECT OS 대시보드 작업 및 점검 기록
 
-> 최종 점검일: 2026-10-11 KST
+> 최종 점검일: 2026-10-12 KST
 > 공개 화면: https://wooyoung-project-os.w00young09111.chatgpt.site
 
 ## 목적
@@ -29,6 +29,8 @@ Notion은 코드나 상세 로그의 원본이 아니라 개인 진행 상태를
 | `09 / PROJECT CONTROL CENTER` | 작업명, 상태, 우선순위, 마감일, 담당자, Issue·PR 링크 | Issue와 PR |
 | `10 / ENGINEERING CONTROL CENTER` | 데이터·SQL·UI/UX·개인정보·보안·AX 품질 기준 요약 | `docs/architecture/engineering-quality-plan.md` |
 | `TEST & INCIDENT LOG` | 테스트·오류·재검증 상태와 증빙 링크 | `docs/quality/test-log.md`, Actions, PR |
+| `11 / RESEARCH INSIGHTS` | 비식별 설문 집계와 제품 우선순위 | `docs/research/survey-results.md` |
+| `12 / SECURITY CENTER` | 위협, 보안 기준, 구현 단계와 출시 게이트 | `docs/security/security-benchmark-and-plan.md` |
 
 테스트 표는 `테스트 / 오류명`, `상태`, `구분`, `실행일`, `환경`, `결과`, `심각도`, `Commit / PR`, `담당자`, `증빙`, `재검증일` 속성을 사용한다. 실제 개인정보, 토큰, 전체 stack trace와 운영 데이터는 Notion에 복사하지 않는다.
 

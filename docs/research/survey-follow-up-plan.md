@@ -5,6 +5,7 @@
 - 수집 기간: 2026-10-08 ~ 2026-10-14 KST
 - 공개 설문: <https://forms.gle/Ak7sobyXqTyBmSb9A>
 - 목표: 유효 응답 30건, 권장 50건
+- 2026-10-12 중간 집계: 유효 응답 21건
 - 현재는 응답을 계속 수집하고 설문 문항을 변경하지 않는다.
 - 이름, 연락처와 정확한 신체 치수는 분석 데이터에 포함하지 않는다.
 
@@ -39,7 +40,7 @@
 
 ## 산출물
 
-- `docs/research/survey-results.md`: 집계값, 교차 분석과 익명화된 인사이트
+- `docs/research/survey-results.md`: 2026-10-12 중간 집계 완료, 2026-10-15 최종 갱신 예정
 - `docs/research/competitive-analysis.md`: 동일 구매 과제로 비교한 경쟁 서비스 분석
 - `docs/research/assumption-backlog.md`: 확인·기각·보류된 가설
 - `docs/product/problem.md`: 근거가 반영된 문제 정의
