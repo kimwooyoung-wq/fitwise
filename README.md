@@ -252,6 +252,9 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Recommendation pipeline](docs/architecture/recommendation-pipeline.md) | 후보 생성, 점수와 설명 흐름 | Draft |
 | [Product catalog ingestion](docs/architecture/product-catalog-ingestion.md) | 공식 피드·API 수집, 정규화, 최신성과 권리 정책 | Draft |
 | [App foundation](docs/architecture/app-foundation.md) | 앱 기술 스택, 저장소 경계, 데이터 모델과 도입 순서 | Draft |
+| [Engineering quality plan](docs/architecture/engineering-quality-plan.md) | 데이터 무결성·SQL·UI/UX·개인정보·보안·AX 자동화 기준 | Active |
+| [Test strategy](docs/quality/test-strategy.md) | 테스트 계층, 환경, 시나리오와 통과 기준 | Active |
+| [Test log](docs/quality/test-log.md) | 테스트·오류·복구 검증 실행 기록 | Active |
 | [Error management](docs/operations/error-management.md) | 오류 수집, 분류, 수정·재검증과 Error Center 기준 | Active |
 | [WOOYOUNG PROJECT OS 점검 기록](docs/operations/project-os-dashboard.md) | 프로젝트 홈 구현 범위, 연결 저장소, 동작 점검과 제한사항 | Active |
 | Product requirements | MVP 요구사항과 제외 범위 | Planned |
