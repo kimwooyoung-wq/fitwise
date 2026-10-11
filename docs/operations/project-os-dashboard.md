@@ -1,6 +1,6 @@
 # WOOYOUNG PROJECT OS 대시보드 작업 및 점검 기록
 
-> 최종 점검일: 2026-10-08 KST  
+> 최종 점검일: 2026-10-11 KST
 > 공개 화면: https://wooyoung-project-os.w00young09111.chatgpt.site
 
 ## 목적
@@ -19,6 +19,18 @@
 | GitHub Tasks | 저장소별 열린 Issue 표시, 진행 중·남은 과제 분류, 저장소 필터 | 정상·제한사항 참고 |
 | Quick Access | FITWISE, SafeLink, SafeRoad, 인생게임 저장소 바로가기 | 정상 |
 | 접근성·레이아웃 | 버튼 레이블, 새 창 링크 보호 속성, 가로 넘침 여부 확인 | 정상 |
+
+## 비공개 Notion 운영 구조
+
+Notion은 코드나 상세 로그의 원본이 아니라 개인 진행 상태를 빠르게 확인하는 보조 화면이다.
+
+| 페이지 | 역할 | GitHub 기준 |
+|---|---|---|
+| `09 / PROJECT CONTROL CENTER` | 작업명, 상태, 우선순위, 마감일, 담당자, Issue·PR 링크 | Issue와 PR |
+| `10 / ENGINEERING CONTROL CENTER` | 데이터·SQL·UI/UX·개인정보·보안·AX 품질 기준 요약 | `docs/architecture/engineering-quality-plan.md` |
+| `TEST & INCIDENT LOG` | 테스트·오류·재검증 상태와 증빙 링크 | `docs/quality/test-log.md`, Actions, PR |
+
+테스트 표는 `테스트 / 오류명`, `상태`, `구분`, `실행일`, `환경`, `결과`, `심각도`, `Commit / PR`, `담당자`, `증빙`, `재검증일` 속성을 사용한다. 실제 개인정보, 토큰, 전체 stack trace와 운영 데이터는 Notion에 복사하지 않는다.
 
 ## 연결된 저장소
 
