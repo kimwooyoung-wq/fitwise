@@ -127,7 +127,7 @@
 
 ## 관련 문서
 
-- [설문 중간 분석](survey-results.md)
+- [설문 최종 분석](survey-results.md)
 - [설문 후속 계획](survey-follow-up-plan.md)
 - [검색·추천 프로토타입](../architecture/mobile-search-prototype.md)
 - [테스트 전략](../quality/test-strategy.md)

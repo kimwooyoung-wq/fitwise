@@ -199,7 +199,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 
 > The stack is a working proposal and may change after product discovery.
 
-현재는 앱 우선으로 [`검색 → 추천 결과` 기술 프로토타입](docs/architecture/mobile-search-prototype.md)을 구성한다. 합성 상품으로 API 계약과 사용 흐름만 검증하며, 설문 결과 전에는 추천 정확도나 기능 우선순위가 검증됐다고 판단하지 않는다.
+현재는 앱 우선으로 [`검색 → 추천 결과` 기술 프로토타입](docs/architecture/mobile-search-prototype.md)을 구성한다. 최종 설문 21건을 근거로 `상황·예산 검색 → 3개 후보 비교 → 사이즈·핏 근거`를 첫 검증 흐름으로 정했으며, 합성 상품으로 API 계약과 사용성을 검증한다. 설문 결과만으로 추천 정확도나 제품 효과가 검증됐다고 판단하지 않는다.
 
 ---
 
@@ -246,8 +246,9 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Problem statement](docs/product/problem.md) | 문제, 가설, 검증 기준 | Draft |
 | [Product strategy](docs/product/product-strategy.md) | 차별화, 제품 루프, 사업 모델 가설 | Draft |
 | [Competitive analysis framework](docs/research/competitive-analysis-framework.md) | 경쟁 서비스와 사업성 평가 기준 | Draft |
-| [Survey questionnaire](docs/research/survey-questionnaire.md) | 공개 설문 문항과 분석 계획 | Active |
-| [Survey results](docs/research/survey-results.md) | 21건 중간 집계, 제품 결정과 후속 검증 | Active |
+| [Survey questionnaire](docs/research/survey-questionnaire.md) | 종료된 공개 설문 문항과 분석 기준 | Closed |
+| [Survey results](docs/research/survey-results.md) | 최종 21건 집계, 가설 판정과 MVP 우선순위 | Final |
+| [Assumption backlog](docs/research/assumption-backlog.md) | 확인·검증 중·차단·미확정 가설과 반증 결정 | Active |
 | [Usability test plan](docs/research/usability-test-plan.md) | 5인 비교 과업, 측정 지표, 비식별 기록표와 판정 기준 | Ready |
 | [Team project specification](docs/team/team-project-specification.md) | 신규 팀원용 제품 범위, 데이터 공유 등급, 과제·PR·보안 규칙 | Active |
 | [Visual system](docs/design/visual-system.md) | 색상, 서체, 레이아웃 원칙 | Draft |

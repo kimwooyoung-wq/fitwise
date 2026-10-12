@@ -9,7 +9,7 @@
 | 단계 | Phase 1 · Product Discovery |
 | 이슈 | [#1](https://github.com/kimwooyoung-wq/fitwise/issues/1) |
 
-이번 주에는 설문 문항과 제품 기능 우선순위를 확정하지 않는다. 설문은 2026-10-14까지 계속 받고, 응답을 바꾸는 문항 수정 없이 가설과 종료 후 분석 기준을 확정한다.
+설문은 2026-10-12에 최종 21건으로 종료했으며 [최종 분석](../docs/research/survey-results.md)에서 핵심 문제와 프로토타입 우선순위를 확정했다. 목표 30건보다 작은 편의표본이므로 시장 전체로 일반화하지 않고 경쟁 분석과 5인 과업 테스트로 행동 근거를 보완한다.
 
 단, 사용자 흐름 검증을 앞당기기 위한 `검색 → 추천 결과` 기술 프로토타입은 합성 데이터로 병행한다. 프로토타입 결과를 제품 가치가 검증된 것으로 해석하거나 실제 브랜드 상품을 연결하지 않는다.
 
@@ -20,7 +20,9 @@
 - [x] 검색 → 추천 API 계약과 앱 상태 프로토타입
 - [x] 앱 기술 스택·저장소·도입 순서 문서화
 - [x] 오류 분류와 개인 Error Center 운영 기준 문서화
+- [x] 설문 종료, 최종 집계와 가설 판정
 - [ ] Android 또는 iOS 실기기에서 정상·빈 결과·오류·재시도 확인
-- [ ] 설문 종료 후 MVP PRD와 데이터 사전·ERD v0 확정
+- [ ] 경쟁 서비스 동일 과업 비교
+- [ ] 5인 사용성 테스트 후 MVP PRD와 데이터 사전·ERD v0 확정
 
 기술 기준: [App foundation](../docs/architecture/app-foundation.md) · [Error management](../docs/operations/error-management.md)

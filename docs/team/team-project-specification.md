@@ -12,7 +12,7 @@ FITWISE는 사용자가 상황·예산·스타일 조건을 자연어로 입력�
 
 ## 2. 현재 검증 근거
 
-2026-10-12 기준 Google Forms 중간 응답 21건에서 다음 문제가 우선순위로 확인됐다.
+2026-10-12 종료된 Google Forms 최종 응답 21건에서 다음 문제가 우선순위로 확인됐다.
 
 | 관찰 | 결과 | 제품에 주는 의미 |
 |---|---:|---|
@@ -249,7 +249,7 @@ PR에는 반드시 다음 내용이 포함돼야 한다.
 - [앱 기반 구조](../architecture/app-foundation.md)
 - [데이터·SQL·보안·AX 품질 계획](../architecture/engineering-quality-plan.md)
 - [상품 데이터 수집](../architecture/product-catalog-ingestion.md)
-- [설문 중간 분석](../research/survey-results.md)
+- [설문 최종 분석](../research/survey-results.md)
 - [5인 사용성 테스트](../research/usability-test-plan.md)
 - [보안 벤치마크](../security/security-benchmark-and-plan.md)
 - [테스트 전략](../quality/test-strategy.md)
