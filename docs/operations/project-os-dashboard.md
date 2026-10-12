@@ -31,6 +31,7 @@ Notion은 코드나 상세 로그의 원본이 아니라 개인 진행 상태를
 | `TEST & INCIDENT LOG` | 테스트·오류·재검증 상태와 증빙 링크 | `docs/quality/test-log.md`, Actions, PR |
 | `11 / RESEARCH INSIGHTS` | 비식별 설문 집계와 제품 우선순위 | `docs/research/survey-results.md` |
 | `12 / SECURITY CENTER` | 위협, 보안 기준, 구현 단계와 출시 게이트 | `docs/security/security-benchmark-and-plan.md` |
+| `13 / USABILITY TEST LAB` | 5인 비교 과업, 측정 지표, 비식별 기록과 판정 | `docs/research/usability-test-plan.md` |
 
 테스트 표는 `테스트 / 오류명`, `상태`, `구분`, `실행일`, `환경`, `결과`, `심각도`, `Commit / PR`, `담당자`, `증빙`, `재검증일` 속성을 사용한다. 실제 개인정보, 토큰, 전체 stack trace와 운영 데이터는 Notion에 복사하지 않는다.
 
