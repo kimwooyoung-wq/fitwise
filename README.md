@@ -252,6 +252,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Competitive analysis framework](docs/research/competitive-analysis-framework.md) | 경쟁 서비스와 사업성 평가 기준 | Draft |
 | [Survey questionnaire](docs/research/survey-questionnaire.md) | 종료된 공개 설문 문항과 분석 기준 | Closed |
 | [Survey results](docs/research/survey-results.md) | 최종 21건 집계, 가설 판정과 MVP 우선순위 | Final |
+| [Feature decision register](docs/product/feature-decision-register.md) | 설문 근거별 기능 채택·보류·제외와 빠진 기능 감사 | Active |
 | [Assumption backlog](docs/research/assumption-backlog.md) | 확인·검증 중·차단·미확정 가설과 반증 결정 | Active |
 | [Usability test plan](docs/research/usability-test-plan.md) | 5인 비교 과업, 측정 지표, 비식별 기록표와 판정 기준 | Ready |
 | [Team project specification](docs/team/team-project-specification.md) | 신규 팀원용 제품 범위, 데이터 공유 등급, 과제·PR·보안 규칙 | Active |
@@ -261,6 +262,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Product catalog ingestion](docs/architecture/product-catalog-ingestion.md) | 공식 피드·API 수집, 정규화, 최신성과 권리 정책 | Draft |
 | [App foundation](docs/architecture/app-foundation.md) | 앱 기술 스택, 저장소 경계, 데이터 모델과 도입 순서 | Draft |
 | [Engineering quality plan](docs/architecture/engineering-quality-plan.md) | 데이터 무결성·SQL·UI/UX·개인정보·보안·AX 자동화 기준 | Active |
+| [Scalability & data growth](docs/architecture/scalability-and-data-growth.md) | 앱 bundle·목록·이미지·DB·수집 증가 대응과 도입 기준 | Baseline |
 | [Security benchmark & plan](docs/security/security-benchmark-and-plan.md) | OWASP·개인정보위·유사 서비스 기반 보안 통제와 출시 게이트 | Active |
 | [Test strategy](docs/quality/test-strategy.md) | 테스트 계층, 환경, 시나리오와 통과 기준 | Active |
 | [Test log](docs/quality/test-log.md) | 테스트·오류·복구 검증 실행 기록 | Active |

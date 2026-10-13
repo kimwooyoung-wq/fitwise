@@ -43,3 +43,5 @@
 기준 문서: [프로젝트 헌장](../docs/product/project-charter.md) · [제품 요구사항 기준선](../docs/product/requirements.md) · [경쟁 서비스 검증 계획](../docs/research/competitive-analysis.md) · [공통 완료 기준](DEFINITION_OF_DONE.md)
 
 기술 기준: [App foundation](../docs/architecture/app-foundation.md) · [Error management](../docs/operations/error-management.md)
+
+추가 기준: [기능 결정 등록부](../docs/product/feature-decision-register.md)에서 설문 근거와 채택·보류·제외 상태를 관리하고, [데이터 증가와 앱 성능 계획](../docs/architecture/scalability-and-data-growth.md)에 따라 전체 카탈로그를 앱에 내려받지 않는다. 문서 추가는 검증 게이트 통과가 아니므로 현재 진행률에는 가산하지 않는다.
