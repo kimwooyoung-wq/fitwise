@@ -74,6 +74,8 @@ JSON은 원문 응답이나 실험 스냅샷처럼 구조가 아직 안정되지
 
 ## 데이터 모델 v0
 
+테이블별 소유권, CRUD·검색·삭제 흐름, SQL 초안과 RLS 정책은 [Database Design & SQL Contract v0](database-design-and-sql.md)을 기준으로 한다. 이 문서는 설계 기준선이며 실제 migration과 정책 적용은 9주차 검증 대상이다.
+
 | 테이블 | 핵심 책임 | 민감도 |
 |---|---|---|
 | `profiles` | 사용자 ID, 선택적 신체·핏 선호, 동의 버전 | 높음 |

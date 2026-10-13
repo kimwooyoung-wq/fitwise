@@ -261,6 +261,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Recommendation pipeline](docs/architecture/recommendation-pipeline.md) | 후보 생성, 점수와 설명 흐름 | Draft |
 | [Product catalog ingestion](docs/architecture/product-catalog-ingestion.md) | 공식 피드·API 수집, 정규화, 최신성과 권리 정책 | Draft |
 | [App foundation](docs/architecture/app-foundation.md) | 앱 기술 스택, 저장소 경계, 데이터 모델과 도입 순서 | Draft |
+| [Database design & SQL contract](docs/architecture/database-design-and-sql.md) | PostgreSQL 데이터 경계, CRUD·검색·삭제 SQL, RLS와 9주차 검증 기준 | v0 |
 | [Engineering quality plan](docs/architecture/engineering-quality-plan.md) | 데이터 무결성·SQL·UI/UX·개인정보·보안·AX 자동화 기준 | Active |
 | [Scalability & data growth](docs/architecture/scalability-and-data-growth.md) | 앱 bundle·목록·이미지·DB·수집 증가 대응과 도입 기준 | Baseline |
 | [Security benchmark & plan](docs/security/security-benchmark-and-plan.md) | OWASP·개인정보위·유사 서비스 기반 보안 통제와 출시 게이트 | Active |
@@ -269,7 +270,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Error management](docs/operations/error-management.md) | 오류 수집, 분류, 수정·재검증과 Error Center 기준 | Active |
 | [WOOYOUNG PROJECT OS 점검 기록](docs/operations/project-os-dashboard.md) | 프로젝트 홈 구현 범위, 연결 저장소, 동작 점검과 제한사항 | Active |
 | User research | 인터뷰 계획과 결과 | Planned |
-| Data dictionary & ERD v0 | 데이터 정의, 소유권, 민감도와 삭제 규칙 | Planned |
+| Data dictionary & ERD v0 | DB v0 초안 작성 완료, 5인 테스트·9주차 migration/RLS 검증 후 확정 | Draft |
 
 ---
 

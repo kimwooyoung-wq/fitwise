@@ -13,7 +13,12 @@
 
 단, 사용자 흐름 검증을 앞당기기 위한 `검색 → 추천 결과` 기술 프로토타입은 합성 데이터로 병행한다. 프로토타입 결과를 제품 가치가 검증된 것으로 해석하거나 실제 브랜드 상품을 연결하지 않는다.
 
-이번 주 남은 과제: 1주차 산출물과 프로젝트 기준선의 사람 검수를 받고, [사람 검증 실행표](../docs/research/human-validation-runbook.md)에 따라 앱 중심 경쟁 서비스와 실기기 항목을 확인한다. 에이전트는 공개 근거·비식별 결과를 비교표와 가설에 반영한다.
+이번 주 남은 과제는 아래처럼 완료 게이트와 후속 검증을 구분한다.
+
+1. **1주차 완료 게이트**: PR #2의 리서치 기준선과 PR #4의 후속 문서를 사람이 검수하고, 선행 PR부터 순서대로 `main` 반영 여부를 결정한다.
+2. **프로토타입 기술 확인**: Android 또는 iOS 개발 빌드에서 정상·빈 결과·오류·재시도를 스모크 테스트한다. 이는 앱 전체 최종 검토가 아니다.
+3. **2주차 실행 준비**: [사람 검증 실행표](../docs/research/human-validation-runbook.md)에 따라 앱 중심 경쟁 서비스의 동일 과업을 수행한다. 경쟁 서비스 실제 비교 결과는 2주차 증빙으로 계산한다.
+4. **후속 제품 게이트**: 5인 사용성 테스트 후 MVP PRD와 데이터 사전·ERD v0를 확정한다. 현재 DB 문서는 구현 전 초안이다.
 
 ## 진행률 기준
 
@@ -43,5 +48,7 @@
 기준 문서: [프로젝트 헌장](../docs/product/project-charter.md) · [제품 요구사항 기준선](../docs/product/requirements.md) · [경쟁 서비스 검증 계획](../docs/research/competitive-analysis.md) · [공통 완료 기준](DEFINITION_OF_DONE.md)
 
 기술 기준: [App foundation](../docs/architecture/app-foundation.md) · [Error management](../docs/operations/error-management.md)
+
+데이터 기준: [Database Design & SQL Contract v0](../docs/architecture/database-design-and-sql.md) — 저장·조회·검색·수정·삭제와 RLS 초안은 문서화됐지만, 실제 migration·권한·복구 검증은 9주차 완료 조건이다.
 
 추가 기준: [기능 결정 등록부](../docs/product/feature-decision-register.md)에서 설문 근거와 채택·보류·제외 상태를 관리하고, [데이터 증가와 앱 성능 계획](../docs/architecture/scalability-and-data-growth.md)에 따라 전체 카탈로그를 앱에 내려받지 않는다. 문서 추가는 검증 게이트 통과가 아니므로 현재 진행률에는 가산하지 않는다.
