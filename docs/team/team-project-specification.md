@@ -4,6 +4,8 @@
 
 이 문서는 FITWISE에 새로 참여하는 팀원이 프로젝트의 목적, 현재 범위, 데이터 접근 원칙과 과제 제출 방식을 한 번에 이해하도록 만든 시작 문서다. 실제 요구사항과 구현의 최종 기준은 GitHub의 `main` 브랜치다.
 
+작업 전에는 [프로젝트 헌장](../product/project-charter.md)에서 제품 목표·비목표와 단계 게이트를, [제품 요구사항 기준선](../product/requirements.md)에서 관련 요구사항 ID와 수용 기준을 확인한다. 기능 아이디어가 두 문서에 연결되지 않으면 바로 구현하지 않고 Issue에서 범위 변경을 먼저 검토한다.
+
 ## 1. 프로젝트 한 문장
 
 FITWISE는 사용자가 상황·예산·스타일 조건을 자연어로 입력하면 소수의 의류 후보를 비교하고, **추천 이유·주의점·사이즈 근거·보유 의류와의 조합 가능성**을 설명해 구매 결정을 돕는 모바일 우선 서비스다.
@@ -124,6 +126,8 @@ Private Storage
 ```markdown
 ## 사용자 가치
 
+## 관련 요구사항·가설 ID
+
 ## 구현 범위
 
 ## 제공 데이터와 사용 제한
@@ -243,6 +247,9 @@ PR에는 반드시 다음 내용이 포함돼야 한다.
 ## 13. 기준 문서
 
 - [개발 협업 규칙](../../AGENTS.md)
+- [프로젝트 헌장](../product/project-charter.md)
+- [제품 요구사항 기준선](../product/requirements.md)
+- [주차 과제 공통 완료 기준](../../tasks/DEFINITION_OF_DONE.md)
 - [문제 정의](../product/problem.md)
 - [제품 전략](../product/product-strategy.md)
 - [검색·추천 프로토타입](../architecture/mobile-search-prototype.md)

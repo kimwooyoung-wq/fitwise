@@ -3,6 +3,20 @@ description: 사용자 조사, 경쟁 분석, 요구사항과 설계 문서 작�
 title: "docs: "
 labels: ["research", "documentation"]
 body:
+  - type: input
+    id: hypothesis
+    attributes:
+      label: 관련 요구사항·가설 ID
+      description: 예) H-03, FW-COMPARE-001
+    validations:
+      required: true
+  - type: input
+    id: week_gate
+    attributes:
+      label: 관련 주차와 단계 게이트
+      description: 예) 2주 · G1 문제 기준선
+    validations:
+      required: true
   - type: textarea
     id: question
     attributes:

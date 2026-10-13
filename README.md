@@ -207,6 +207,8 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 
 > **Execution plan** · 2026-10-08부터 2027-03-10까지 진행하는 [22주 주차별 과제](tasks/ROADMAP.md)를 기준으로 매주 산출물과 완료 조건을 점검합니다. 현재 과제는 [`tasks/CURRENT.md`](tasks/CURRENT.md)에서 확인합니다.
 
+제품 목표와 범위 변경은 [프로젝트 헌장](docs/product/project-charter.md), 기능·품질 수용 기준은 [제품 요구사항 기준선](docs/product/requirements.md), 과제 통과 여부는 [공통 완료 기준](tasks/DEFINITION_OF_DONE.md)을 먼저 확인합니다.
+
 | Phase | Focus | Deliverable |
 |---|---|---|
 | 01 · Discovery | 사용자 문제와 시장 조사 | 인터뷰, 문제 정의, 성공 지표 |
@@ -243,6 +245,8 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 
 | Document | Purpose | Status |
 |---|---|---|
+| [Project charter](docs/product/project-charter.md) | 22주 목표, P0 흐름, 범위·비목표, 단계 게이트와 변경 통제 | Baseline |
+| [Product requirements](docs/product/requirements.md) | 요구사항 ID, 수용 기준, 상태·품질·측정 이벤트 기준선 | v0 |
 | [Problem statement](docs/product/problem.md) | 문제, 가설, 검증 기준 | Draft |
 | [Product strategy](docs/product/product-strategy.md) | 차별화, 제품 루프, 사업 모델 가설 | Draft |
 | [Competitive analysis framework](docs/research/competitive-analysis-framework.md) | 경쟁 서비스와 사업성 평가 기준 | Draft |
@@ -262,7 +266,6 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Test log](docs/quality/test-log.md) | 테스트·오류·복구 검증 실행 기록 | Active |
 | [Error management](docs/operations/error-management.md) | 오류 수집, 분류, 수정·재검증과 Error Center 기준 | Active |
 | [WOOYOUNG PROJECT OS 점검 기록](docs/operations/project-os-dashboard.md) | 프로젝트 홈 구현 범위, 연결 저장소, 동작 점검과 제한사항 | Active |
-| Product requirements | MVP 요구사항과 제외 범위 | Planned |
 | User research | 인터뷰 계획과 결과 | Planned |
 | Data dictionary & ERD v0 | 데이터 정의, 소유권, 민감도와 삭제 규칙 | Planned |
 
