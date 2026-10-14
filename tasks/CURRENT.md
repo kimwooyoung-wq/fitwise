@@ -53,3 +53,5 @@
 데이터 기준: [Database Design & SQL Contract v0](../docs/architecture/database-design-and-sql.md) — 저장·조회·검색·수정·삭제와 RLS 초안은 문서화됐지만, 실제 migration·권한·복구 검증은 9주차 완료 조건이다.
 
 추가 기준: [기능 결정 등록부](../docs/product/feature-decision-register.md)에서 설문 근거와 채택·보류·제외 상태를 관리하고, [데이터 증가와 앱 성능 계획](../docs/architecture/scalability-and-data-growth.md)에 따라 전체 카탈로그를 앱에 내려받지 않는다. [Figma 모바일 프로토타입 v0](../docs/design/figma-mobile-prototype.md)는 사용성 검증 입력물이며, 문서나 디자인 추가만으로는 검증 게이트를 통과한 것이 아니므로 현재 진행률에는 가산하지 않는다.
+
+사업 기준: [실용적 옷장 가치와 수익 모델 v0](../docs/business/practical-wardrobe-and-revenue.md)에 따라 `사지 않음`도 유효한 결정으로 기록하고, 중복 경고·보유 옷 활용·제휴 표시와 유료 기능 지불 의향을 5인 테스트에서 검증한다. 이 문서 추가는 사업 가설의 명확화이며 현재 주차 진행률에는 가산하지 않는다.

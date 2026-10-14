@@ -10,6 +10,7 @@
 
 | 실행일 | 범위 | 환경·버전 | 명령·시나리오 | 결과 | 증빙 | 후속 작업 |
 |---|---|---|---|---|---|---|
+| 2026-10-14 | 실용적 옷장·수익모델 문서 | local · `feat/3-mobile-search-prototype` · Notion private home | 변경 Markdown 9개 로컬 링크 검사; 변경 diff 비밀값 패턴; `git diff --check`; Notion `BUSINESS v0` 텍스트·GitHub 링크 노출 | PASS · 링크 9개 문서 · secret 0 · Notion 1 block | [사업 가설](../business/practical-wardrobe-and-revenue.md) | 중복 방지·사지 않음·지불 의향은 5인 테스트에서 검증 |
 | 2026-10-14 | Figma 구조·시각·폰트 | Figma · Mobile Prototype v0 | 4개 화면 구조, component set, token collection, 전체 화면 캡처, 텍스트 폰트 64개 검사 | PASS · 4 screens · 64/64 text | [Figma 기록](../design/figma-mobile-prototype.md) | 5인 과업 테스트 전 제품 효과 주장 금지 |
 | 2026-10-14 | Project OS 상태 토글·Figma 링크 | Sites v16 · in-app browser | `node --check dist/app.js`; 필수 DOM·링크·스타일 assertion; `git diff --check`; 토글 변경·새로고침·원상 복구·Figma 링크 노출 | PASS · 정적·브라우저 검사 | [대시보드 기록](../operations/project-os-dashboard.md) | GitHub 자동 쓰기와 기기 간 동기화는 비목표 |
 | 2026-10-11 | 전체 회귀·문서 품질 | local · `feat/3-mobile-search-prototype` | `npm run lint`; `npm run typecheck`; `npm test`; `python -m pytest -q`; 문서 링크·비밀값 패턴 | PASS · 모바일 3개, API 5개 | PR #4 | 실기기·RLS·restore는 환경 도입 후 수행 |

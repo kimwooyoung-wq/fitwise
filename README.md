@@ -6,7 +6,7 @@
 
 ### 상황과 체형을 이해하는 설명 가능한 AI 패션 의사결정 서비스
 
-상품을 더 많이 보여주는 대신, 사용자가 더 적은 탐색으로<br />자신에게 맞는 옷을 확신 있게 선택하도록 돕습니다.
+상품을 더 많이 보여주는 대신, 사용자가 이미 가진 옷과 실제 필요를 확인해<br />구매·보류·사지 않음을 근거 있게 선택하도록 돕습니다.
 
 <br />
 
@@ -27,7 +27,7 @@ FITWISE는 검색, 후기 탐색, 사이즈 고민과 상품 비교를 하나의
 > **Product hypothesis**
 > 목적·체형·예산과 유사 체형 리뷰를 함께 분석해 추천 이유와 신뢰도를 제공하면, 구매 결정 시간은 줄고 선택 확신도는 높아질 것이다.
 
-[문제 정의 자세히 보기 →](docs/product/problem.md) · [제품 전략과 사업 가설 →](docs/product/product-strategy.md)
+[문제 정의 자세히 보기 →](docs/product/problem.md) · [제품 전략과 사업 가설 →](docs/product/product-strategy.md) · [실용적 옷장과 수익 모델 →](docs/business/practical-wardrobe-and-revenue.md)
 
 ---
 
@@ -249,6 +249,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Product requirements](docs/product/requirements.md) | 요구사항 ID, 수용 기준, 상태·품질·측정 이벤트 기준선 | v0 |
 | [Problem statement](docs/product/problem.md) | 문제, 가설, 검증 기준 | Draft |
 | [Product strategy](docs/product/product-strategy.md) | 차별화, 제품 루프, 사업 모델 가설 | Draft |
+| [Practical wardrobe & revenue](docs/business/practical-wardrobe-and-revenue.md) | 중복·과소비 방지 가치, 신뢰 원칙, 단계별 수익모델과 검증 지표 | v0 |
 | [Competitive analysis framework](docs/research/competitive-analysis-framework.md) | 경쟁 서비스와 사업성 평가 기준 | Draft |
 | [Survey questionnaire](docs/research/survey-questionnaire.md) | 종료된 공개 설문 문항과 분석 기준 | Closed |
 | [Survey results](docs/research/survey-results.md) | 최종 21건 집계, 가설 판정과 MVP 우선순위 | Final |
