@@ -39,6 +39,7 @@
 - [x] 오류 분류와 개인 Error Center 운영 기준 문서화
 - [x] 설문 종료, 최종 집계와 가설 판정
 - [x] 경쟁 서비스 6개 비교 대상·공통 시나리오·기록표 확정
+- [x] 검색·추천·핏 근거·옷장 조합 Figma v0 설계와 구조 검증
 - [ ] Android 또는 iOS 개발 빌드에서 정상·빈 결과·오류·재시도 스모크 테스트
 - [ ] 경쟁 서비스 동일 과업 비교
 - [ ] 5인 사용성 테스트 후 MVP PRD와 데이터 사전·ERD v0 확정
@@ -51,4 +52,4 @@
 
 데이터 기준: [Database Design & SQL Contract v0](../docs/architecture/database-design-and-sql.md) — 저장·조회·검색·수정·삭제와 RLS 초안은 문서화됐지만, 실제 migration·권한·복구 검증은 9주차 완료 조건이다.
 
-추가 기준: [기능 결정 등록부](../docs/product/feature-decision-register.md)에서 설문 근거와 채택·보류·제외 상태를 관리하고, [데이터 증가와 앱 성능 계획](../docs/architecture/scalability-and-data-growth.md)에 따라 전체 카탈로그를 앱에 내려받지 않는다. 문서 추가는 검증 게이트 통과가 아니므로 현재 진행률에는 가산하지 않는다.
+추가 기준: [기능 결정 등록부](../docs/product/feature-decision-register.md)에서 설문 근거와 채택·보류·제외 상태를 관리하고, [데이터 증가와 앱 성능 계획](../docs/architecture/scalability-and-data-growth.md)에 따라 전체 카탈로그를 앱에 내려받지 않는다. [Figma 모바일 프로토타입 v0](../docs/design/figma-mobile-prototype.md)는 사용성 검증 입력물이며, 문서나 디자인 추가만으로는 검증 게이트를 통과한 것이 아니므로 현재 진행률에는 가산하지 않는다.

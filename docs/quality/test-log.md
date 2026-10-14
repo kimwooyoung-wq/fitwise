@@ -10,6 +10,8 @@
 
 | 실행일 | 범위 | 환경·버전 | 명령·시나리오 | 결과 | 증빙 | 후속 작업 |
 |---|---|---|---|---|---|---|
+| 2026-10-14 | Figma 구조·시각·폰트 | Figma · Mobile Prototype v0 | 4개 화면 구조, component set, token collection, 전체 화면 캡처, 텍스트 폰트 64개 검사 | PASS · 4 screens · 64/64 text | [Figma 기록](../design/figma-mobile-prototype.md) | 5인 과업 테스트 전 제품 효과 주장 금지 |
+| 2026-10-14 | Project OS 상태 토글·Figma 링크 | local static build | `node --check dist/app.js`; 필수 DOM·링크·스타일 assertion; `git diff --check` | PASS · 정적 검사 | [대시보드 기록](../operations/project-os-dashboard.md) | 배포 후 클릭·새로고침 보존 브라우저 확인 |
 | 2026-10-11 | 전체 회귀·문서 품질 | local · `feat/3-mobile-search-prototype` | `npm run lint`; `npm run typecheck`; `npm test`; `python -m pytest -q`; 문서 링크·비밀값 패턴 | PASS · 모바일 3개, API 5개 | PR #4 | 실기기·RLS·restore는 환경 도입 후 수행 |
 | 2026-10-11 | API 테스트 의존성 | Windows sandbox · Python 3.12 | API 5개 수집 후 첫 `TestClient` 요청 | BLOCKED → PASS | `services/api/requirements-dev.txt` | 누락된 `httpx` 추가, `httpx2` 유지; socketpair 제한 밖에서 5개 재검증 |
 
