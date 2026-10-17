@@ -101,4 +101,7 @@ def test_catalog_excludes_unapproved_and_expired_products() -> None:
         assert blocked_id not in visible
 
     with psycopg.connect(DATABASE_URL) as connection:
+        connection.execute(
+            "delete from catalog.products where id in (%s, %s)", (blocked_id, allowed_id)
+        )
         connection.execute("delete from catalog.data_sources where id in (%s, %s)", (source_id, allowed_source_id))
