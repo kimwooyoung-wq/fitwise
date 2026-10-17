@@ -125,7 +125,7 @@ PR 병합, Issue 종료, 브랜치 삭제와 운영 데이터 변경은 사용�
 ## 2026-10-18 상태 정합성 점검
 
 - PR #4는 `feat/3-mobile-search-prototype` 브랜치의 기존 PR로 유지했다. 새 PR을 만들지 않았고, PR #4가 PR #2를 기반으로 하는 스택 구조도 그대로 두었다.
-- PR #4에 문서 갱신 커밋 `77e8f9c`를 push했다. CI run [39044245230](https://github.com/kimwooyoung-wq/fitwise/actions/runs/39044245230)의 `mobile` 및 `api` 두 job이 성공했다. 모바일 테스트 3개가 통과했고 API `python -m pytest -q` job도 성공했으나, Actions 로그에서 정확한 API 통과 개수는 확인할 수 없어 숫자를 추정하지 않았다.
+- PR #4에 문서 갱신 커밋 `77e8f9c`, 점검 기록 커밋 `e9348ed`를 push했다. 최신 점검 기록 커밋의 CI run [39044907943](https://github.com/kimwooyoung-wq/fitwise/actions/runs/39044907943)에서 `mobile` 및 `api` 두 job이 성공했다. 모바일 테스트 3개가 통과했고 API `python -m pytest -q` job도 성공했으나, Actions 로그에서 정확한 API 통과 개수는 확인할 수 없어 숫자를 추정하지 않았다.
 - CI에는 Node.js 20 지원 종료 및 Ubuntu 러너 전환 관련 공지가 표시됐다. 이번 문서 정합성 작업 범위에서는 워크플로를 변경하지 않았다.
 - Notion PROJECT OS의 TODAY 날짜를 `2026.10.18`로 갱신했다. PR/CI 확인 체크는 검토를 완료했다는 뜻이며, PR 병합이나 최종 승인을 의미하지 않는다.
 - 공개 OS v17에는 Figma v0·4개 화면 설명이 남아 있고, GitHub API 백업 과제 데이터는 2026-10-09 확인 시점으로 오래됐다. 현재 Figma v1은 5개 화면이며 관련 GitHub 설계 문서는 갱신했지만 공개 웹사이트는 아직 수정·재배포하지 않았다.
