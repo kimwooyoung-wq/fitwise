@@ -111,6 +111,8 @@ source_record
 
 ## Ingestion pipeline
 
+현재 구현 상태: Issue #5에서 provider-neutral 입력 검증과 권한·최신성 게이트를 먼저 추가한다. 실제 브랜드/판매처 피드는 아직 연결되지 않았으며, 공급 계약과 접근 권한이 확정될 때까지 합성 fixture만 사용한다. 이 구현을 실상품 연동이나 운영 동기화 완료로 표현하지 않는다.
+
 ```mermaid
 flowchart LR
     A["Partner feed / API"] --> B["Source adapter"]
