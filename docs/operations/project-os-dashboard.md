@@ -1,6 +1,6 @@
 # WOOYOUNG PROJECT OS 대시보드 작업 및 점검 기록
 
-> 최종 점검일: 2026-10-14 KST
+> 최종 점검일: 2026-10-18 KST
 > 공개 화면: https://wooyoung-project-os.w00young09111.chatgpt.site
 
 ## 현재 제품 검증 상태
@@ -121,6 +121,17 @@ PR 병합, Issue 종료, 브랜치 삭제와 운영 데이터 변경은 사용�
 - 수수료가 추천 순위를 바꾸지 않으며, 제휴 관계를 표시하고 개인 데이터를 판매하지 않는 신뢰 원칙을 고정했다.
 - 비공개 Notion 홈에 `BUSINESS v0` 요약과 [GitHub 기준 문서](../business/practical-wardrobe-and-revenue.md)를 추가하고 화면에서 노출을 확인했다.
 - 사업 가설 문서 추가는 사용자 검증 완료가 아니므로 전체·Discovery·1주차 진행률을 올리지 않았다.
+
+## 2026-10-18 상태 정합성 점검
+
+- PR #4는 `feat/3-mobile-search-prototype` 브랜치의 기존 PR로 유지했다. 새 PR을 만들지 않았고, PR #4가 PR #2를 기반으로 하는 스택 구조도 그대로 두었다.
+- PR #4에 문서 갱신 커밋 `77e8f9c`를 push했다. CI run [39044245230](https://github.com/kimwooyoung-wq/fitwise/actions/runs/39044245230)의 `mobile` 및 `api` 두 job이 성공했다. 모바일 테스트 3개가 통과했고 API `python -m pytest -q` job도 성공했으나, Actions 로그에서 정확한 API 통과 개수는 확인할 수 없어 숫자를 추정하지 않았다.
+- CI에는 Node.js 20 지원 종료 및 Ubuntu 러너 전환 관련 공지가 표시됐다. 이번 문서 정합성 작업 범위에서는 워크플로를 변경하지 않았다.
+- Notion PROJECT OS의 TODAY 날짜를 `2026.10.18`로 갱신했다. PR/CI 확인 체크는 검토를 완료했다는 뜻이며, PR 병합이나 최종 승인을 의미하지 않는다.
+- 공개 OS v17에는 Figma v0·4개 화면 설명이 남아 있고, GitHub API 백업 과제 데이터는 2026-10-09 확인 시점으로 오래됐다. 현재 Figma v1은 5개 화면이며 관련 GitHub 설계 문서는 갱신했지만 공개 웹사이트는 아직 수정·재배포하지 않았다.
+- 공개 사이트 저장소를 기존 호스팅 편집 흐름으로 열려 했으나 source helper가 새 checkout의 Git 메타데이터를 유효하게 읽지 못해 중단했다. 기존 로컬 사이트 저장소에 사용자 변경이 있어 보존했으며 덮어쓰기·배포하지 않았다.
+- PR #4는 계속 열려 있고 리뷰 승인과 사용자 최종 검토가 남아 있다. PR #2도 열려 있으므로 병합·Issue 종료는 하지 않았다.
+- 다음 작업: 기존 Sites 소스 checkout을 안전하게 다시 연결한 뒤 공개 OS의 Figma v1 상태와 GitHub 과제 백업 기준일을 갱신하고 배포 전 검증한다.
 
 ## 현재 제한사항
 
