@@ -6,7 +6,7 @@
 
 ### 상황과 체형을 이해하는 설명 가능한 AI 패션 의사결정 서비스
 
-상품을 더 많이 보여주는 대신, 사용자가 더 적은 탐색으로<br />자신에게 맞는 옷을 확신 있게 선택하도록 돕습니다.
+상품을 더 많이 보여주는 대신, 사용자가 이미 가진 옷과 실제 필요를 확인해<br />구매·보류·사지 않음을 근거 있게 선택하도록 돕습니다.
 
 <br />
 
@@ -27,7 +27,7 @@ FITWISE는 검색, 후기 탐색, 사이즈 고민과 상품 비교를 하나의
 > **Product hypothesis**
 > 목적·체형·예산과 유사 체형 리뷰를 함께 분석해 추천 이유와 신뢰도를 제공하면, 구매 결정 시간은 줄고 선택 확신도는 높아질 것이다.
 
-[문제 정의 자세히 보기 →](docs/product/problem.md) · [제품 전략과 사업 가설 →](docs/product/product-strategy.md)
+[문제 정의 자세히 보기 →](docs/product/problem.md) · [제품 전략과 사업 가설 →](docs/product/product-strategy.md) · [실용적 옷장과 수익 모델 →](docs/business/practical-wardrobe-and-revenue.md)
 
 ---
 
@@ -171,7 +171,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 
 `#111111` Ink · `#F7F7F4` Canvas · `#FFFFFF` Surface · `#D9D9D4` Line · `#D8FF3E` Signal
 
-[비주얼 시스템 자세히 보기 →](docs/design/visual-system.md)
+[비주얼 시스템 자세히 보기 →](docs/design/visual-system.md) · [Figma 모바일 프로토타입 →](docs/design/figma-mobile-prototype.md)
 
 ---
 
@@ -179,6 +179,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 
 ![Next.js](https://img.shields.io/badge/Next.js-111111?style=flat-square&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
@@ -188,7 +189,8 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 
 | Layer | Plan |
 |---|---|
-| Web | Next.js · TypeScript · Tailwind CSS |
+| App | Expo · React Native · TypeScript |
+| Web expansion | Next.js · TypeScript · Tailwind CSS |
 | API | FastAPI · Python |
 | Data | PostgreSQL · pgvector |
 | Auth & Storage | Supabase |
@@ -197,11 +199,15 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 
 > The stack is a working proposal and may change after product discovery.
 
+현재는 앱 우선으로 [`검색 → 추천 결과` 기술 프로토타입](docs/architecture/mobile-search-prototype.md)을 구성한다. 최종 설문 21건을 근거로 `상황·예산 검색 → 3개 후보 비교 → 사이즈·핏 근거`를 첫 검증 흐름으로 정했으며, 합성 상품으로 API 계약과 사용성을 검증한다. 설문 결과만으로 추천 정확도나 제품 효과가 검증됐다고 판단하지 않는다.
+
 ---
 
 ## 08. Roadmap
 
 > **Execution plan** · 2026-10-08부터 2027-03-10까지 진행하는 [22주 주차별 과제](tasks/ROADMAP.md)를 기준으로 매주 산출물과 완료 조건을 점검합니다. 현재 과제는 [`tasks/CURRENT.md`](tasks/CURRENT.md)에서 확인합니다.
+
+제품 목표와 범위 변경은 [프로젝트 헌장](docs/product/project-charter.md), 기능·품질 수용 기준은 [제품 요구사항 기준선](docs/product/requirements.md), 과제 통과 여부는 [공통 완료 기준](tasks/DEFINITION_OF_DONE.md)을 먼저 확인합니다.
 
 | Phase | Focus | Deliverable |
 |---|---|---|
@@ -239,18 +245,34 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 
 | Document | Purpose | Status |
 |---|---|---|
+| [Project charter](docs/product/project-charter.md) | 22주 목표, P0 흐름, 범위·비목표, 단계 게이트와 변경 통제 | Baseline |
+| [Product requirements](docs/product/requirements.md) | 요구사항 ID, 수용 기준, 상태·품질·측정 이벤트 기준선 | v0 |
 | [Problem statement](docs/product/problem.md) | 문제, 가설, 검증 기준 | Draft |
 | [Product strategy](docs/product/product-strategy.md) | 차별화, 제품 루프, 사업 모델 가설 | Draft |
+| [Practical wardrobe & revenue](docs/business/practical-wardrobe-and-revenue.md) | 중복·과소비 방지 가치, 신뢰 원칙, 단계별 수익모델과 검증 지표 | v0 |
 | [Competitive analysis framework](docs/research/competitive-analysis-framework.md) | 경쟁 서비스와 사업성 평가 기준 | Draft |
-| [Survey questionnaire](docs/research/survey-questionnaire.md) | 공개 설문 문항과 분석 계획 | Active |
+| [Survey questionnaire](docs/research/survey-questionnaire.md) | 종료된 공개 설문 문항과 분석 기준 | Closed |
+| [Survey results](docs/research/survey-results.md) | 최종 21건 집계, 가설 판정과 MVP 우선순위 | Final |
+| [Feature decision register](docs/product/feature-decision-register.md) | 설문 근거별 기능 채택·보류·제외와 빠진 기능 감사 | Active |
+| [Assumption backlog](docs/research/assumption-backlog.md) | 확인·검증 중·차단·미확정 가설과 반증 결정 | Active |
+| [Usability test plan](docs/research/usability-test-plan.md) | 5인 비교 과업, 측정 지표, 비식별 기록표와 판정 기준 | Ready |
+| [Team project specification](docs/team/team-project-specification.md) | 신규 팀원용 제품 범위, 데이터 공유 등급, 과제·PR·보안 규칙 | Active |
 | [Visual system](docs/design/visual-system.md) | 색상, 서체, 레이아웃 원칙 | Draft |
+| [Figma mobile prototype](docs/design/figma-mobile-prototype.md) | 검색·추천·핏 근거·옷장 조합·구매 결정 5개 화면과 디자인 검증 기록 | v1 |
 | [My Wardrobe](docs/product/my-wardrobe.md) | 옷장 데이터와 추천 활용 방식 | Draft |
 | [Recommendation pipeline](docs/architecture/recommendation-pipeline.md) | 후보 생성, 점수와 설명 흐름 | Draft |
 | [Product catalog ingestion](docs/architecture/product-catalog-ingestion.md) | 공식 피드·API 수집, 정규화, 최신성과 권리 정책 | Draft |
+| [App foundation](docs/architecture/app-foundation.md) | 앱 기술 스택, 저장소 경계, 데이터 모델과 도입 순서 | Draft |
+| [Database design & SQL contract](docs/architecture/database-design-and-sql.md) | PostgreSQL 데이터 경계, CRUD·검색·삭제 SQL, RLS와 9주차 검증 기준 | v0 |
+| [Engineering quality plan](docs/architecture/engineering-quality-plan.md) | 데이터 무결성·SQL·UI/UX·개인정보·보안·AX 자동화 기준 | Active |
+| [Scalability & data growth](docs/architecture/scalability-and-data-growth.md) | 앱 bundle·목록·이미지·DB·수집 증가 대응과 도입 기준 | Baseline |
+| [Security benchmark & plan](docs/security/security-benchmark-and-plan.md) | OWASP·개인정보위·유사 서비스 기반 보안 통제와 출시 게이트 | Active |
+| [Test strategy](docs/quality/test-strategy.md) | 테스트 계층, 환경, 시나리오와 통과 기준 | Active |
+| [Test log](docs/quality/test-log.md) | 테스트·오류·복구 검증 실행 기록 | Active |
+| [Error management](docs/operations/error-management.md) | 오류 수집, 분류, 수정·재검증과 Error Center 기준 | Active |
 | [WOOYOUNG PROJECT OS 점검 기록](docs/operations/project-os-dashboard.md) | 프로젝트 홈 구현 범위, 연결 저장소, 동작 점검과 제한사항 | Active |
-| Product requirements | MVP 요구사항과 제외 범위 | Planned |
 | User research | 인터뷰 계획과 결과 | Planned |
-| Architecture | 시스템과 데이터 흐름 | Planned |
+| Data dictionary & ERD v0 | DB v0 초안 작성 완료, 5인 테스트·9주차 migration/RLS 검증 후 확정 | Draft |
 
 ---
 

@@ -13,6 +13,20 @@ body:
       description: 누구의 어떤 행동이나 판단을 개선하는지 적어주세요.
     validations:
       required: true
+  - type: input
+    id: requirement
+    attributes:
+      label: 관련 요구사항·가설 ID
+      description: 예) FW-COMPARE-001, H-03. 연결할 ID가 없다면 기능 구현 전에 범위 변경 검토가 필요합니다.
+    validations:
+      required: true
+  - type: input
+    id: week_gate
+    attributes:
+      label: 관련 주차와 단계 게이트
+      description: 예) 5주 · G3 프로토타입
+    validations:
+      required: true
   - type: textarea
     id: scope
     attributes:
@@ -44,3 +58,10 @@ body:
     attributes:
       label: 사람 작업과 외부 의존성
       description: 계정, 데이터 이용 허가, 외부 승인과 사람이 확인할 항목을 적어주세요.
+  - type: textarea
+    id: scope_impact
+    attributes:
+      label: 범위 영향
+      description: 이 작업 때문에 빠지거나 늦어지는 P0/P1 범위가 있는지 적어주세요. 없으면 없다고 명시합니다.
+    validations:
+      required: true
