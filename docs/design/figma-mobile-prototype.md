@@ -1,7 +1,8 @@
-# FITWISE Figma Mobile Prototype v0
+# FITWISE Figma Mobile Prototype v1
 
 > 상태: **디자인 검증 전 초안**  
 > Figma: https://www.figma.com/design/QwbVZABZL9cgxVNepWCO0T  
+> 구매 결정 화면: https://www.figma.com/design/QwbVZABZL9cgxVNepWCO0T?node-id=13-2
 > 기준일: 2026-10-14 KST
 
 ## 목적
@@ -16,12 +17,14 @@
 | `02 · Recommendation Results` | 무한 목록 대신 세 전략을 이해할 수 있는가 | Safe·Balanced·Bold, 추천 이유, 주의점 |
 | `03 · Fit Evidence` | 사이즈 제안과 불확실성을 함께 이해하는가 | 추천 사이즈, 신뢰도, 실측·후기 근거 |
 | `04 · Wardrobe Match` | 기존 옷과의 조합이 결정에 도움이 되는가 | 보유 의류 조합, 활용도, 중복 위험 |
+| `05 · Purchase Decision` | 비슷한 보유 옷을 확인한 뒤 과소비 없이 결정할 수 있는가 | 82% 유사 경고, 실질 차이, 필요도, 구매·보류·사지 않음, 제휴 고지 |
 
 ```text
 상황·예산 입력
   → 세 가지 추천 전략 비교
   → 사이즈·핏 근거 확인
   → 보유 의류와 조합 확인
+  → 구매·보류·사지 않음 결정
 ```
 
 ## 시각 기준
@@ -46,17 +49,20 @@ Figma에서는 한글 렌더링 일관성을 위해 `Noto Sans KR`을 사용했�
 
 ## 구조 검증 결과
 
-- 모바일 화면 4개 생성
+- 모바일 화면 5개 생성
 - 버튼 상태를 재사용 가능한 component set으로 구성
 - `FITWISE / Dark v0` 토큰 컬렉션 생성
-- 텍스트 64개가 모두 `Noto Sans KR`을 사용하는지 검사: **PASS**
-- 전체 화면 시각 점검과 카드 넘침 수정: **PASS**
+- 전체 흐름의 편집 가능한 텍스트 85개가 모두 `Noto Sans KR`을 사용하는지 검사: **PASS**
+- `05 · Purchase Decision`의 하단 경계 `720px ≤ 820px`로 프레임 넘침 검사: **PASS**
+- 전체 화면 시각 점검, 기본 흰색 레이아웃 채우기 제거와 재검증: **PASS**
+- 상품명·가격·유사도·필요도는 모두 합성 테스트 값이며 제품 효과 증빙이 아님
 
 ## 남은 검증
 
-1. 5명에게 동일한 구매 상황을 주고 검색 입력부터 후보 선택까지 수행시킨다.
-2. 추천 이유 이해 여부, 후보 선택 완료, 선택 시간과 혼란 지점을 기록한다.
-3. 로딩·빈 결과·오류·재시도 화면은 코드 프로토타입에서 확인하고 Figma에는 검증 결과에 따라 추가한다.
-4. 테스트 후에만 문구, 정보 우선순위와 다음 구현 범위를 확정한다.
+1. 5명에게 동일한 구매 상황을 주고 검색 입력부터 `구매·보류·사지 않음` 선택까지 수행시킨다.
+2. 추천 이유 이해 여부, 중복 경고 이해, 최종 선택, 선택 시간과 혼란 지점을 기록한다.
+3. 제휴 수수료 고지를 본 뒤에도 추천 순위가 독립적이라고 이해하는지 확인한다.
+4. 로딩·빈 결과·오류·재시도 화면은 코드 프로토타입에서 확인하고 Figma에는 검증 결과에 따라 추가한다.
+5. 테스트 후에만 문구, 정보 우선순위와 다음 구현 범위를 확정한다.
 
 관련 문서: [Mobile Search Prototype](../architecture/mobile-search-prototype.md) · [Usability Test Plan](../research/usability-test-plan.md) · [Visual System](visual-system.md)

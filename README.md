@@ -258,7 +258,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Usability test plan](docs/research/usability-test-plan.md) | 5인 비교 과업, 측정 지표, 비식별 기록표와 판정 기준 | Ready |
 | [Team project specification](docs/team/team-project-specification.md) | 신규 팀원용 제품 범위, 데이터 공유 등급, 과제·PR·보안 규칙 | Active |
 | [Visual system](docs/design/visual-system.md) | 색상, 서체, 레이아웃 원칙 | Draft |
-| [Figma mobile prototype](docs/design/figma-mobile-prototype.md) | 검색·추천·핏 근거·옷장 조합 4개 화면과 디자인 검증 기록 | v0 |
+| [Figma mobile prototype](docs/design/figma-mobile-prototype.md) | 검색·추천·핏 근거·옷장 조합·구매 결정 5개 화면과 디자인 검증 기록 | v1 |
 | [My Wardrobe](docs/product/my-wardrobe.md) | 옷장 데이터와 추천 활용 방식 | Draft |
 | [Recommendation pipeline](docs/architecture/recommendation-pipeline.md) | 후보 생성, 점수와 설명 흐름 | Draft |
 | [Product catalog ingestion](docs/architecture/product-catalog-ingestion.md) | 공식 피드·API 수집, 정규화, 최신성과 권리 정책 | Draft |

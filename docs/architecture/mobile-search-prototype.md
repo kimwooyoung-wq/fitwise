@@ -43,10 +43,10 @@ Swagger는 사용자 가치 검증을 대신하지 않는다. API 계약과 예�
 
 ## Figma 설계 산출물
 
-편집 가능한 [Figma 모바일 프로토타입 v0](../design/figma-mobile-prototype.md)는 코드 프로토타입과 동일한 P0 흐름을 4개 화면으로 정리한다. 디자인 파일은 https://www.figma.com/design/QwbVZABZL9cgxVNepWCO0T 에서 확인한다.
+편집 가능한 [Figma 모바일 프로토타입 v1](../design/figma-mobile-prototype.md)는 코드 프로토타입의 P0 흐름과 후속 구매 결정을 5개 화면으로 정리한다. 디자인 파일은 https://www.figma.com/design/QwbVZABZL9cgxVNepWCO0T 에서 확인한다.
 
 - 코드: API 계약과 로딩·성공·빈 결과·오류·재시도 상태를 검증
-- Figma: 정보 계층, 세 추천 전략, 사이즈 근거와 옷장 조합 이해도를 검증
+- Figma: 정보 계층, 세 추천 전략, 사이즈 근거, 옷장 조합과 `구매·보류·사지 않음` 결정 이해도를 검증
 - 공통 제한: 합성 데이터만 사용하며 실제 추천 정확도를 주장하지 않음
 
 ## Mock 제거 조건
