@@ -8,6 +8,7 @@
 
 ## 실행 기록
 
+| 2026-10-28 | Issue #5 DB/RLS 만료 차단 회귀 | GitHub Actions · run [40530506290](https://github.com/kimwooyoung-wq/fitwise/actions/runs/40530506290) · commit `91d7b04` | PostgreSQL 16 서비스; pending 출처, 만료 상품, 만료 출처 상품, 허용된 합성 상품에 대한 RLS 조회 검증; 모바일/API/database CI | PASS · 3 jobs 성공; DB/RLS 2 tests 통과. 만료 상품 및 만료 출처가 조회되지 않고 허용 합성 상품은 조회됨 | [PR #6](https://github.com/kimwooyoung-wq/fitwise/pull/6) · [Actions run](https://github.com/kimwooyoung-wq/fitwise/actions/runs/40530506290) | 실제 공급원과 계약 권한은 미확정; 검색·멱등성 행 수·EXPLAIN 검증은 Issue #5의 남은 게이트로 유지 |
 | 실행일 | 범위 | 환경·버전 | 명령·시나리오 | 결과 | 증빙 | 후속 작업 |
 |---|---|---|---|---|---|---|
 | 2026-10-18 | Issue #5 DB/RLS·카탈로그 CI | GitHub Actions · run [39055258240](https://github.com/kimwooyoung-wq/fitwise/actions/runs/39055258240) · commit `4a472a8` | PostgreSQL 16 서비스; migration 적용; synthetic seed 2회 실행; `python -m pytest -q tests/test_database_rls.py`; 모바일/API 기존 CI job | PASS · mobile/API/database 3 jobs 성공; DB/RLS 2 tests 통과. 최초 CI에서 테스트 fixture 삭제 순서 오류 발견 후 수정·재실행 | [PR #6](https://github.com/kimwooyoung-wq/fitwise/pull/6) · [Actions run](https://github.com/kimwooyoung-wq/fitwise/actions/runs/39055258240) | 실제 공식 상품 공급원·저장 및 표시 권한·테스트 계정 선택 전까지 synthetic data 유지; 사용자 승인 전 병합 금지 |
