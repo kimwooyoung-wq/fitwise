@@ -86,6 +86,7 @@ jobs:
           psql -v ON_ERROR_STOP=1 -f ../../db/supabase/migrations/202610180001_foundation.sql
           psql -v ON_ERROR_STOP=1 -f ../../db/supabase/seed.sql
           psql -v ON_ERROR_STOP=1 -f ../../db/supabase/seed.sql
+          psql -v ON_ERROR_STOP=1 -f ../../db/tests/assert_seed_idempotent.sql
         env:
           PGHOST: localhost
           PGPORT: 5432
