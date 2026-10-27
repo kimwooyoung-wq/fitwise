@@ -8,6 +8,7 @@
 
 ## 실행 기록
 
+| 2026-10-28 | Issue #5 DB/RLS 만료 차단·seed 멱등성 | GitHub Actions · run [40530846103](https://github.com/kimwooyoung-wq/fitwise/actions/runs/40530846103) · commit `c32a073` | PostgreSQL 16; migration 적용; 합성 seed 2회 및 source/product/variant/offer 각 1행 단언; 만료 상품·만료 출처 차단 RLS 테스트; mobile/API/database CI | PASS · 3 jobs 성공; DB/RLS 2 tests 통과; idempotency assertion 통과 | [PR #6](https://github.com/kimwooyoung-wq/fitwise/pull/6) · [Actions run](https://github.com/kimwooyoung-wq/fitwise/actions/runs/40530846103) | 대표 검색 SQL/EXPLAIN 검증, 전체 제품 검색 흐름, 공급원 계약·실제 피드는 아직 미완료; 로컬 PostgreSQL 미실행 |
 | 2026-10-28 | Issue #5 DB/RLS 만료 차단 회귀 | GitHub Actions · run [40530506290](https://github.com/kimwooyoung-wq/fitwise/actions/runs/40530506290) · commit `91d7b04` | PostgreSQL 16 서비스; pending 출처, 만료 상품, 만료 출처 상품, 허용된 합성 상품에 대한 RLS 조회 검증; 모바일/API/database CI | PASS · 3 jobs 성공; DB/RLS 2 tests 통과. 만료 상품 및 만료 출처가 조회되지 않고 허용 합성 상품은 조회됨 | [PR #6](https://github.com/kimwooyoung-wq/fitwise/pull/6) · [Actions run](https://github.com/kimwooyoung-wq/fitwise/actions/runs/40530506290) | 실제 공급원과 계약 권한은 미확정; 검색·멱등성 행 수·EXPLAIN 검증은 Issue #5의 남은 게이트로 유지 |
 | 실행일 | 범위 | 환경·버전 | 명령·시나리오 | 결과 | 증빙 | 후속 작업 |
 |---|---|---|---|---|---|---|
