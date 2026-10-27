@@ -69,39 +69,65 @@ def test_wardrobe_crud_isolated_by_owner(users: tuple[uuid.UUID, uuid.UUID]) -> 
 
 def test_catalog_excludes_unapproved_and_expired_products() -> None:
     assert DATABASE_URL
-    source_id, allowed_id, blocked_id = uuid.uuid4(), uuid.uuid4(), uuid.uuid4()
+    pending_source_id, allowed_source_id, expired_source_id = uuid.uuid4(), uuid.uuid4(), uuid.uuid4()
+    pending_product_id, allowed_product_id, expired_product_id, expired_source_product_id = (
+        uuid.uuid4(), uuid.uuid4(), uuid.uuid4(), uuid.uuid4()
+    )
     with psycopg.connect(DATABASE_URL) as connection:
         connection.execute(
             """insert into catalog.data_sources (id, source_key, display_name, rights_status, permitted_uses)
                values (%s, 'test-pending-' || %s, 'pending test source', 'pending', '{}')""",
-            (source_id, str(source_id)),
+            (pending_source_id, str(pending_source_id)),
         )
-        connection.execute(
-            """insert into catalog.products
-               (id, source_id, source_product_id, brand_name, product_name, category_code, product_url, observed_at, expires_at)
-               values (%s, %s, 'pending-1', 'Test', 'Blocked product', 'top', 'https://example.invalid/pending', now(), now() + interval '1 day')""",
-            (blocked_id, source_id),
-        )
-        allowed_source_id = uuid.uuid4()
         connection.execute(
             """insert into catalog.data_sources (id, source_key, display_name, rights_status, permitted_uses)
                values (%s, 'test-synthetic-' || %s, 'synthetic test source', 'synthetic', '{product_display}')""",
             (allowed_source_id, str(allowed_source_id)),
         )
         connection.execute(
+            """insert into catalog.data_sources
+               (id, source_key, display_name, rights_status, permitted_uses, expires_at)
+               values (%s, 'test-expired-' || %s, 'expired synthetic source', 'synthetic', '{product_display}', now() - interval '1 second')""",
+            (expired_source_id, str(expired_source_id)),
+        )
+        connection.execute(
+            """insert into catalog.products
+               (id, source_id, source_product_id, brand_name, product_name, category_code, product_url, observed_at, expires_at, is_synthetic)
+               values (%s, %s, 'pending-1', 'Test', 'Pending product', 'top', 'https://example.invalid/pending', now(), now() + interval '1 day', false)""",
+            (pending_product_id, pending_source_id),
+        )
+        connection.execute(
             """insert into catalog.products
                (id, source_id, source_product_id, brand_name, product_name, category_code, product_url, observed_at, expires_at, is_synthetic)
                values (%s, %s, 'synthetic-1', 'Test', 'Visible fixture', 'top', 'https://example.invalid/synthetic', now(), now() + interval '1 day', true)""",
-            (allowed_id, allowed_source_id),
+            (allowed_product_id, allowed_source_id),
+        )
+        connection.execute(
+            """insert into catalog.products
+               (id, source_id, source_product_id, brand_name, product_name, category_code, product_url, observed_at, expires_at, is_synthetic)
+               values (%s, %s, 'expired-product-1', 'Test', 'Expired product', 'top', 'https://example.invalid/expired-product', now(), now() - interval '1 second', true)""",
+            (expired_product_id, allowed_source_id),
+        )
+        connection.execute(
+            """insert into catalog.products
+               (id, source_id, source_product_id, brand_name, product_name, category_code, product_url, observed_at, expires_at, is_synthetic)
+               values (%s, %s, 'expired-source-product-1', 'Test', 'Expired source product', 'top', 'https://example.invalid/expired-source', now(), now() + interval '1 day', true)""",
+            (expired_source_product_id, expired_source_id),
         )
 
     with user_connection(uuid.uuid4()) as connection:
         visible = {row[0] for row in connection.execute("select id from catalog.products")}
-        assert allowed_id in visible
-        assert blocked_id not in visible
+        assert allowed_product_id in visible
+        assert pending_product_id not in visible
+        assert expired_product_id not in visible
+        assert expired_source_product_id not in visible
 
     with psycopg.connect(DATABASE_URL) as connection:
         connection.execute(
-            "delete from catalog.products where id in (%s, %s)", (blocked_id, allowed_id)
+            "delete from catalog.products where id = any(%s)",
+            ([pending_product_id, allowed_product_id, expired_product_id, expired_source_product_id],),
         )
-        connection.execute("delete from catalog.data_sources where id in (%s, %s)", (source_id, allowed_source_id))
+        connection.execute(
+            "delete from catalog.data_sources where id = any(%s)",
+            ([pending_source_id, allowed_source_id, expired_source_id],),
+        )
