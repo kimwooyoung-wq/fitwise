@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 
 import { requestRecommendations } from '../api/client';
+import { CatalogSearchPanel } from '../components/CatalogSearchPanel';
 import { RecommendationCard } from '../components/RecommendationCard';
 import { RecommendationResponse, validateSearchInput } from '../domain/recommendation';
 
@@ -126,7 +127,12 @@ export default function SearchScreen() {
           }
           renderItem={({ item }) => <RecommendationCard item={item} />}
           ItemSeparatorComponent={() => <View style={styles.separator} />}
-          ListFooterComponent={<Text style={styles.footer}>FITWISE는 현재 구매 결정을 검증하는 프로토타입입니다.</Text>}
+          ListFooterComponent={(
+            <View>
+              <CatalogSearchPanel budgetText={budget} />
+              <Text style={styles.footer}>FITWISE는 현재 구매 결정을 검증하는 프로토타입입니다.</Text>
+            </View>
+          )}
         />
       </KeyboardAvoidingView>
     </SafeAreaView>

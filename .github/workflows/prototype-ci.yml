@@ -5,6 +5,7 @@ on:
     paths:
       - 'apps/mobile/**'
       - 'services/api/**'
+      - 'db/**'
       - 'docs/architecture/**'
       - 'docs/operations/**'
       - 'tasks/CURRENT.md'
@@ -43,3 +44,65 @@ jobs:
           cache-dependency-path: services/api/requirements-dev.txt
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m pytest -q
+
+  database:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: fitwise_test
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d fitwise_test"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    defaults:
+      run:
+        working-directory: services/api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: services/api/requirements-dev.txt
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Bootstrap CI-only Supabase Auth shim
+        run: psql -v ON_ERROR_STOP=1 -f ../../db/tests/bootstrap.sql
+        env:
+          PGHOST: localhost
+          PGPORT: 5432
+          PGUSER: postgres
+          PGPASSWORD: postgres
+          PGDATABASE: fitwise_test
+      - name: Apply migrations and repeatable synthetic seed
+        shell: bash
+        run: |
+          psql -v ON_ERROR_STOP=1 -f ../../db/supabase/migrations/202610180001_foundation.sql
+          psql -v ON_ERROR_STOP=1 -f ../../db/supabase/migrations/202610300001_catalog_search_index.sql
+          psql -v ON_ERROR_STOP=1 -f ../../db/supabase/seed.sql
+          psql -v ON_ERROR_STOP=1 -f ../../db/supabase/seed.sql
+          psql -v ON_ERROR_STOP=1 -f ../../db/tests/assert_seed_idempotent.sql
+        env:
+          PGHOST: localhost
+          PGPORT: 5432
+          PGUSER: postgres
+          PGPASSWORD: postgres
+          PGDATABASE: fitwise_test
+      - name: Capture representative synthetic search query plan
+        run: psql -v ON_ERROR_STOP=1 -f ../../db/tests/explain_catalog_search.sql
+        env:
+          PGHOST: localhost
+          PGPORT: 5432
+          PGUSER: postgres
+          PGPASSWORD: postgres
+          PGDATABASE: fitwise_test
+      - name: Test database RLS and catalog search API
+        run: python -m pytest -q tests/test_database_rls.py tests/test_catalog_search_api.py
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/fitwise_test
