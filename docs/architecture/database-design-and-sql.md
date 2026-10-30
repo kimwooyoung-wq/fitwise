@@ -501,10 +501,13 @@ where deleted_at is null;
 
 ### Issue #5 초기 개발 스파이크
 
-- [ ] 로컬/CI PostgreSQL migration과 합성 seed
-- [ ] 옷장 CRUD 사용자 간 RLS 격리 통합 테스트
-- [ ] 카탈로그 출처 권리·최신성 기반 읽기 정책
-- [ ] 실제 외부 수집은 승인된 계약/API·계정 확보 전 비활성화
+- [x] CI PostgreSQL migration과 합성 seed 반복 적용 및 중복 방지 assertion
+- [x] 옷장 CRUD 사용자 간 RLS 격리 통합 테스트
+- [x] 카탈로그 출처 권리·최신성 기반 읽기 정책
+- [x] 합성 카탈로그 전용 API 검색: 검색어·카테고리·예산·결과 수 제한, SQL 파라미터화
+- [x] 대표 검색 `EXPLAIN (ANALYZE, BUFFERS)`를 합성 fixture에서 캡처하고 최신 판매 조건 인덱스 확인
+- [x] 실제 외부 수집은 승인된 계약/API·계정 확보 전 비활성화
+- [ ] 전체 승인 상품 흐름, 인증된 사용자 API 연동, 운영 규모 데이터셋의 부하/p95 검증은 별도 후속 범위
 
 ### 9주차에서 추가 구현·증명할 것
 
