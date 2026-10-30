@@ -80,10 +80,11 @@ jobs:
           PGUSER: postgres
           PGPASSWORD: postgres
           PGDATABASE: fitwise_test
-      - name: Apply migration and repeatable synthetic seed
+      - name: Apply migrations and repeatable synthetic seed
         shell: bash
         run: |
           psql -v ON_ERROR_STOP=1 -f ../../db/supabase/migrations/202610180001_foundation.sql
+          psql -v ON_ERROR_STOP=1 -f ../../db/supabase/migrations/202610300001_catalog_search_index.sql
           psql -v ON_ERROR_STOP=1 -f ../../db/supabase/seed.sql
           psql -v ON_ERROR_STOP=1 -f ../../db/supabase/seed.sql
           psql -v ON_ERROR_STOP=1 -f ../../db/tests/assert_seed_idempotent.sql
@@ -93,6 +94,15 @@ jobs:
           PGUSER: postgres
           PGPASSWORD: postgres
           PGDATABASE: fitwise_test
-      - run: python -m pytest -q tests/test_database_rls.py
+      - name: Capture representative synthetic search query plan
+        run: psql -v ON_ERROR_STOP=1 -f ../../db/tests/explain_catalog_search.sql
+        env:
+          PGHOST: localhost
+          PGPORT: 5432
+          PGUSER: postgres
+          PGPASSWORD: postgres
+          PGDATABASE: fitwise_test
+      - name: Test database RLS and catalog search API
+        run: python -m pytest -q tests/test_database_rls.py tests/test_catalog_search_api.py
         env:
           DATABASE_URL: postgresql://postgres:postgres@localhost:5432/fitwise_test
