@@ -19,6 +19,19 @@ FITWISE는 상품을 더 많이 보여주는 쇼핑몰이 아니다. 사용자�
 
 초기 차별화의 중심은 **플랫폼 중립적인 비교**와 **설명 가능한 추천**이다. 추천 정확도를 근거 없이 주장하지 않고, 사용자가 더 빠르고 확신 있게 결정할 수 있는지를 행동 지표로 검증한다.
 
+## AI boundary and value
+
+AI is an implementation option, not the product's value proposition. FITWISE must first prove that it reduces decision time and improves confidence through usable product data, transparent comparisons, and wardrobe-aware reasoning.
+
+- Use deterministic code and SQL for budget, availability, category, explicit exclusions, and other hard constraints.
+- Start with rules and structured fields for intent parsing. Evaluate an LLM only if user testing shows that natural-language ambiguity materially blocks the flow.
+- If an LLM is evaluated, it may extract a proposed structured intent or explain precomputed evidence. The user must be able to inspect and edit extracted fields before recommendations.
+- Scores, duplicate-purchase checks, wardrobe compatibility, price, inventory, size measurements, and confidence calculations remain deterministic and traceable.
+- Never let a generated explanation add product attributes or facts absent from the authorized catalog and evidence.
+- AI must be evaluated against a rules-only baseline for field accuracy, correction rate, latency, cost, unsupported claims, and privacy exposure. Keep the simpler rules-only path if AI does not provide measurable user value.
+
+The official examples in [the industry AI benchmark](../research/ai-in-fashion-benchmark.md) show that apparel businesses use AI in several distinct areas; they do not establish that FITWISE needs generative AI or on-device inference.
+
 ## Core product loop
 
 ```mermaid
