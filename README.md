@@ -242,6 +242,7 @@ FITWISE는 패션 에디토리얼의 절제된 분위기와 의사결정 도구�
 | [Problem statement](docs/product/problem.md) | 문제, 가설, 검증 기준 | Draft |
 | [Product strategy](docs/product/product-strategy.md) | 차별화, 제품 루프, 사업 모델 가설 | Draft |
 | [Competitive analysis framework](docs/research/competitive-analysis-framework.md) | 경쟁 서비스와 사업성 평가 기준 | Draft |
+| [AI in Fashion benchmark](docs/research/ai-in-fashion-benchmark.md) | 공식 출처 기반 업계 AI 활용 사례와 FITWISE 적용 기준 | Draft |
 | [Survey questionnaire](docs/research/survey-questionnaire.md) | 공개 설문 문항과 분석 계획 | Active |
 | [Visual system](docs/design/visual-system.md) | 색상, 서체, 레이아웃 원칙 | Draft |
 | [My Wardrobe](docs/product/my-wardrobe.md) | 옷장 데이터와 추천 활용 방식 | Draft |
