@@ -29,6 +29,8 @@ flowchart TB
 
 ## 2. Parse intent
 
+The initial implementation should support structured inputs and a deterministic rules baseline. Natural-language parsing is an experiment, not a dependency for the MVP. Add an LLM only when Week 7 usability evidence shows that rules or simple guided inputs prevent task completion and a privacy/cost review accepts the trade-off.
+
 자유 텍스트를 다음과 같은 구조로 변환한다.
 
 ```json
@@ -42,7 +44,12 @@ flowchart TB
 }
 ```
 
-파싱 결과는 추천 전에 사용자가 확인하고 수정할 수 있어야 한다.
+파싱 결과는 추천 전에 사용자가 확인하고 수정할 수 있어야 한다. Regardless of parser, deterministic schema validation and normalization must run after parsing. Unknown or ambiguous values require user confirmation; they must not silently weaken hard constraints.
+
+- Keep a rules-only parser available as the baseline and fallback.
+- Compare optional AI parsing on a versioned, synthetic evaluation set.
+- Do not send the entire product catalog, body measurements, account identifiers, or wardrobe history to a model by default.
+- AI output is untrusted input: validate allowed fields, types, ranges, and enumerated values before use.
 
 ## 3. Hard filters
 
