@@ -29,6 +29,8 @@ flowchart TB
 
 ## 2. Parse intent
 
+The initial implementation should support structured inputs and a deterministic rules baseline. Natural-language parsing is an experiment, not a dependency for the MVP. Add an LLM only when Week 7 usability evidence shows that rules or simple guided inputs prevent task completion and a privacy/cost review accepts the trade-off.
+
 자유 텍스트를 다음과 같은 구조로 변환한다.
 
 ```json
@@ -37,11 +39,17 @@ flowchart TB
   "budget_max": 200000,
   "styles": ["minimal", "smart_casual"],
   "avoid": ["large_logo", "slim_fit"],
-  "required_categories": ["top", "outerwear"]
+  "required_categories": ["top", "outerwear"],
+  "wardrobe_item_ids": ["black-wide-pants"]
 }
 ```
 
-파싱 결과는 추천 전에 사용자가 확인하고 수정할 수 있어야 한다.
+파싱 결과는 추천 전에 사용자가 확인하고 수정할 수 있어야 한다. Regardless of parser, deterministic schema validation and normalization must run after parsing. Unknown or ambiguous values require user confirmation; they must not silently weaken hard constraints.
+
+- Keep a rules-only parser available as the baseline and fallback.
+- Compare optional AI parsing on a versioned, synthetic evaluation set.
+- Do not send the entire product catalog, body measurements, account identifiers, or wardrobe history to a model by default.
+- AI output is untrusted input: validate allowed fields, types, ranges, and enumerated values before use.
 
 ## 3. Hard filters
 
@@ -56,6 +64,13 @@ flowchart TB
 ## 4. Candidate retrieval
 
 초기 버전은 구조화된 태그와 텍스트 검색을 조합한다. 데이터가 충분해진 이후 임베딩 기반 유사도 검색을 실험한다.
+
+- 외부 검색 결과와 FITWISE가 사용 권한을 가진 운영 카탈로그를 구분한다.
+- 가격·재고·실측의 출처와 최신성을 확인한 후보만 해당 근거에 사용한다.
+- 검색 데이터만 있고 사이즈 실측이 없는 상품에는 정밀한 핏 추천을 생성하지 않는다.
+- 전체 카탈로그를 생성형 모델에 전달하지 않고 하드 필터와 검색으로 후보를 먼저 축소한다.
+
+[상품 카탈로그 수집 전략](product-catalog-ingestion.md)에서 공급처 연동, 정규화, 최신성과 권리 정책을 관리한다.
 
 ## 5. Feature scoring
 
@@ -101,6 +116,8 @@ flowchart TB
 - 더 저렴하게
 - 더 개성 있게
 - 사이즈 추천이 맞음 또는 맞지 않음
+- 구매함 또는 구매하지 않음
+- 실제 착용감과 함께 입은 보유 의류
 
 ## Confidence
 

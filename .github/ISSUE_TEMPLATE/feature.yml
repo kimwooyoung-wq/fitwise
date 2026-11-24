@@ -1,0 +1,46 @@
+name: 기능 작업
+description: 사용자 가치와 완료 조건이 정의된 기능 작업
+title: "feat: "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: "구현 전에 사용자 문제와 검증 기준을 먼저 정의합니다."
+  - type: textarea
+    id: problem
+    attributes:
+      label: 해결할 사용자 문제
+      description: 누구의 어떤 행동이나 판단을 개선하는지 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 구현 범위
+      description: 포함 범위와 제외 범위를 구분해 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 완료 조건
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: 검증 방법
+      value: |
+        - [ ] 자동 검사:
+        - [ ] 화면/실기기 확인:
+        - [ ] 개인정보·비밀값 확인:
+    validations:
+      required: true
+  - type: textarea
+    id: dependency
+    attributes:
+      label: 사람 작업과 외부 의존성
+      description: 계정, 데이터 이용 허가, 외부 승인과 사람이 확인할 항목을 적어주세요.
