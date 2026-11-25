@@ -3,6 +3,7 @@ import { ActivityIndicator, Pressable, StyleSheet, Text, TextInput, View } from 
 
 import { requestCatalogSearch } from '../api/client';
 import type { CatalogItem, CatalogSearchResponse } from '../domain/catalog';
+import { colors } from '../design/colors';
 
 type SearchState =
   | { kind: 'idle' }
@@ -73,7 +74,7 @@ export function CatalogSearchPanel({ budgetText }: { budgetText: string }) {
         onSubmitEditing={search}
         returnKeyType="search"
         placeholder="예: 네이비"
-        placeholderTextColor="#777777"
+        placeholderTextColor={colors.placeholder}
         style={styles.input}
       />
       <Pressable
@@ -85,7 +86,7 @@ export function CatalogSearchPanel({ budgetText }: { budgetText: string }) {
       >
         <Text style={styles.buttonText}>{state.kind === 'loading' ? 'DB 조회 중' : '합성 카탈로그 조회'}</Text>
       </Pressable>
-      {state.kind === 'loading' && <ActivityIndicator color="#D8FF3E" accessibilityLabel="DB 카탈로그 조회 중" />}
+      {state.kind === 'loading' && <ActivityIndicator color={colors.amber} accessibilityLabel="DB 카탈로그 조회 중" />}
       {state.kind === 'empty' && (
         <View style={styles.stateBox}>
           <Text style={styles.stateTitle}>조건에 맞는 합성 상품이 없습니다.</Text>
@@ -112,25 +113,25 @@ export function CatalogSearchPanel({ budgetText }: { budgetText: string }) {
 }
 
 const styles = StyleSheet.create({
-  panel: { backgroundColor: '#111111', borderColor: '#343434', borderWidth: 1, borderRadius: 20, padding: 18, gap: 12, marginTop: 24 },
-  eyebrow: { color: '#8E8E8E', fontSize: 10, fontWeight: '800', letterSpacing: 1.4 },
-  heading: { color: '#FFFFFF', fontSize: 21, fontWeight: '800' },
-  description: { color: '#A5A5A5', fontSize: 13, lineHeight: 20 },
-  input: { backgroundColor: '#1A1A1A', borderColor: '#3B3B3B', borderWidth: 1, borderRadius: 12, color: '#FFFFFF', fontSize: 15, padding: 13 },
-  button: { alignItems: 'center', backgroundColor: '#D8FF3E', borderRadius: 12, padding: 14 },
+  panel: { backgroundColor: colors.surfaceRaised, borderColor: colors.line, borderWidth: 1, borderRadius: 20, padding: 18, gap: 12, marginTop: 24 },
+  eyebrow: { color: colors.mutedStrong, fontSize: 10, fontWeight: '800', letterSpacing: 1.4 },
+  heading: { color: colors.ink, fontSize: 21, fontWeight: '800' },
+  description: { color: colors.muted, fontSize: 13, lineHeight: 20 },
+  input: { backgroundColor: colors.surface, borderColor: colors.line, borderWidth: 1, borderRadius: 12, color: colors.ink, fontSize: 15, padding: 13 },
+  button: { alignItems: 'center', backgroundColor: colors.walnut, borderRadius: 12, padding: 14 },
   buttonPressed: { opacity: 0.82 },
   buttonDisabled: { opacity: 0.6 },
-  buttonText: { color: '#0A0A0A', fontSize: 14, fontWeight: '800' },
-  stateBox: { backgroundColor: '#191919', borderRadius: 14, padding: 14, gap: 7 },
-  stateTitle: { color: '#FFFFFF', fontSize: 14, fontWeight: '700' },
-  stateBody: { color: '#A5A5A5', fontSize: 12, lineHeight: 18 },
-  retry: { alignSelf: 'flex-start', borderColor: '#D8FF3E', borderWidth: 1, borderRadius: 10, paddingHorizontal: 12, paddingVertical: 8, marginTop: 4 },
-  retryText: { color: '#D8FF3E', fontWeight: '700', fontSize: 12 },
+  buttonText: { color: colors.surface, fontSize: 14, fontWeight: '800' },
+  stateBox: { backgroundColor: colors.surface, borderRadius: 14, padding: 14, gap: 7 },
+  stateTitle: { color: colors.ink, fontSize: 14, fontWeight: '700' },
+  stateBody: { color: colors.muted, fontSize: 12, lineHeight: 18 },
+  retry: { alignSelf: 'flex-start', borderColor: colors.amber, borderWidth: 1, borderRadius: 10, paddingHorizontal: 12, paddingVertical: 8, marginTop: 4 },
+  retryText: { color: colors.walnut, fontWeight: '700', fontSize: 12 },
   results: { gap: 10 },
-  itemCard: { backgroundColor: '#191919', borderRadius: 14, borderColor: '#2B2B2B', borderWidth: 1, padding: 14, gap: 5 },
-  brand: { color: '#999999', fontSize: 11, fontWeight: '700' },
-  itemName: { color: '#FFFFFF', fontSize: 16, fontWeight: '700' },
-  meta: { color: '#AAAAAA', fontSize: 12 },
-  price: { color: '#D8FF3E', fontSize: 16, fontWeight: '800', marginTop: 4 },
-  stock: { color: '#939393', fontSize: 11 },
+  itemCard: { backgroundColor: colors.surface, borderRadius: 14, borderColor: colors.line, borderWidth: 1, padding: 14, gap: 5 },
+  brand: { color: colors.muted, fontSize: 11, fontWeight: '700' },
+  itemName: { color: colors.ink, fontSize: 16, fontWeight: '700' },
+  meta: { color: colors.muted, fontSize: 12 },
+  price: { color: colors.walnut, fontSize: 16, fontWeight: '800', marginTop: 4 },
+  stock: { color: colors.mutedStrong, fontSize: 11 },
 });
