@@ -1,9 +1,11 @@
 # FITWISE Mobile Prototype
 
+모노레포 전체 준비와 PostgreSQL/API 실행은 저장소 루트의 [개발 환경 설정](../../docs/development/setup.md)을 참고하세요.
+
 ## 실행
 
 ```powershell
-npm install
+npm ci
 Copy-Item .env.example .env.local
 npm start
 ```

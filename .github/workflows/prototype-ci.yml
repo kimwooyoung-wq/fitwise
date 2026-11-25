@@ -6,6 +6,10 @@ on:
       - 'apps/mobile/**'
       - 'services/api/**'
       - 'db/**'
+      - 'docker-compose.yml'
+      - '.env.example'
+      - 'docs/development/**'
+      - 'tasks/8주/**'
       - 'docs/architecture/**'
       - 'docs/operations/**'
       - 'tasks/CURRENT.md'
@@ -49,7 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       postgres:
-        image: postgres:16
+        image: pgvector/pgvector:0.8.7-pg16
         env:
           POSTGRES_DB: fitwise_test
           POSTGRES_USER: postgres
