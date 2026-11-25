@@ -15,6 +15,7 @@ import {
 import { requestRecommendations } from '../api/client';
 import { CatalogSearchPanel } from '../components/CatalogSearchPanel';
 import { RecommendationCard } from '../components/RecommendationCard';
+import { colors } from '../design/colors';
 import { RecommendationResponse, validateSearchInput } from '../domain/recommendation';
 
 type ScreenState =
@@ -77,7 +78,7 @@ export default function SearchScreen() {
                 value={query}
                 onChangeText={setQuery}
                 placeholder="예: 첫 출근에 입을 15만 원 이하 재킷"
-                placeholderTextColor="#626262"
+                placeholderTextColor={colors.placeholder}
                 style={[styles.input, styles.queryInput]}
               />
               <Text style={styles.label}>최대 예산</Text>
@@ -87,7 +88,7 @@ export default function SearchScreen() {
                 onChangeText={setBudget}
                 keyboardType="number-pad"
                 placeholder="150000"
-                placeholderTextColor="#626262"
+                placeholderTextColor={colors.placeholder}
                 style={styles.input}
               />
               {validation && <Text style={styles.validation} accessibilityRole="alert">{validation}</Text>}
@@ -100,7 +101,7 @@ export default function SearchScreen() {
               >
                 <Text style={styles.ctaText}>{state.kind === 'loading' ? '조건을 분석하는 중' : '추천 결과 보기'}</Text>
               </Pressable>
-              {state.kind === 'loading' && <ActivityIndicator color="#D8FF3E" size="large" accessibilityLabel="추천 결과 로딩 중" />}
+              {state.kind === 'loading' && <ActivityIndicator color={colors.amber} size="large" accessibilityLabel="추천 결과 로딩 중" />}
               {state.kind === 'empty' && (
                 <View style={styles.stateBox}>
                   <Text style={styles.stateTitle}>조건에 맞는 후보가 없습니다.</Text>
@@ -140,26 +141,26 @@ export default function SearchScreen() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: '#0A0A0A' },
+  safeArea: { flex: 1, backgroundColor: colors.canvas },
   content: { paddingHorizontal: 20, paddingTop: 32, paddingBottom: 56 },
   headerBlock: { gap: 12, marginBottom: 24 },
-  eyebrow: { color: '#D8FF3E', fontSize: 11, fontWeight: '800', letterSpacing: 1.7 },
-  heading: { color: '#FFFFFF', fontSize: 38, fontWeight: '800', lineHeight: 44, letterSpacing: -1.2 },
-  description: { color: '#A5A5A5', fontSize: 15, lineHeight: 23, marginBottom: 12 },
-  label: { color: '#D8D8D8', fontSize: 13, fontWeight: '700', marginTop: 6 },
-  input: { backgroundColor: '#171717', borderColor: '#353535', borderWidth: 1, borderRadius: 16, color: '#FFFFFF', fontSize: 16, padding: 16 },
+  eyebrow: { color: colors.walnut, fontSize: 11, fontWeight: '800', letterSpacing: 1.7 },
+  heading: { color: colors.ink, fontSize: 38, fontWeight: '800', lineHeight: 44, letterSpacing: -1.2 },
+  description: { color: colors.muted, fontSize: 15, lineHeight: 23, marginBottom: 12 },
+  label: { color: colors.inkSoft, fontSize: 13, fontWeight: '700', marginTop: 6 },
+  input: { backgroundColor: colors.surface, borderColor: colors.line, borderWidth: 1, borderRadius: 16, color: colors.ink, fontSize: 16, padding: 16 },
   queryInput: { minHeight: 116, textAlignVertical: 'top' },
-  validation: { color: '#FF9B8C', fontSize: 13 },
-  cta: { alignItems: 'center', backgroundColor: '#D8FF3E', borderRadius: 16, padding: 17, marginTop: 6 },
+  validation: { color: colors.danger, fontSize: 13 },
+  cta: { alignItems: 'center', backgroundColor: colors.walnut, borderRadius: 16, padding: 17, marginTop: 6 },
   ctaPressed: { opacity: 0.82 },
-  ctaText: { color: '#0A0A0A', fontSize: 16, fontWeight: '800' },
-  stateBox: { backgroundColor: '#141414', borderRadius: 20, padding: 20, gap: 8, marginTop: 8 },
-  stateTitle: { color: '#FFFFFF', fontSize: 18, fontWeight: '700' },
-  stateBody: { color: '#A5A5A5', fontSize: 14, lineHeight: 21 },
-  retry: { alignSelf: 'flex-start', borderColor: '#D8FF3E', borderWidth: 1, borderRadius: 12, paddingHorizontal: 14, paddingVertical: 9, marginTop: 8 },
-  retryText: { color: '#D8FF3E', fontWeight: '700' },
+  ctaText: { color: colors.surface, fontSize: 16, fontWeight: '800' },
+  stateBox: { backgroundColor: colors.surfaceRaised, borderRadius: 20, padding: 20, gap: 8, marginTop: 8 },
+  stateTitle: { color: colors.ink, fontSize: 18, fontWeight: '700' },
+  stateBody: { color: colors.muted, fontSize: 14, lineHeight: 21 },
+  retry: { alignSelf: 'flex-start', borderColor: colors.amber, borderWidth: 1, borderRadius: 12, paddingHorizontal: 14, paddingVertical: 9, marginTop: 8 },
+  retryText: { color: colors.walnut, fontWeight: '700' },
   resultHeader: { gap: 8, marginTop: 20 },
-  resultTitle: { color: '#FFFFFF', fontSize: 28, fontWeight: '800' },
+  resultTitle: { color: colors.ink, fontSize: 28, fontWeight: '800' },
   separator: { height: 14 },
-  footer: { color: '#696969', textAlign: 'center', fontSize: 11, marginTop: 30 },
+  footer: { color: colors.muted, textAlign: 'center', fontSize: 11, marginTop: 30 },
 });
