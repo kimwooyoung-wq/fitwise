@@ -1,0 +1,22 @@
+services:
+  db:
+    image: pgvector/pgvector:0.8.7-pg16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:?Copy .env.example to .env before starting}
+      POSTGRES_USER: ${POSTGRES_USER:?Copy .env.example to .env before starting}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Copy .env.example to .env before starting}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - fitwise_pgdata:/var/lib/postgresql/data
+      - ./db:/opt/fitwise/db:ro
+      - ./db/local/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"${POSTGRES_USER}\" -d \"${POSTGRES_DB}\""]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  fitwise_pgdata:
